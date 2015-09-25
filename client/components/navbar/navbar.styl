@@ -1,0 +1,52 @@
+.yy-nav
+  background url("../../assets/images/tree.jpg")
+  background-size cover
+  background-position bottom
+  width 100%
+  height 40rem
+  @media screen and (max-width: 767px)
+    height 20rem
+  @media screen and (max-width: 500px)
+    height 12rem
+
+.yy-nav .nav-fade
+  width 100%
+  height 100%
+  background rgba(0,0,0,.4 )
+
+.yy-nav .nav-container
+  position absolute
+  bottom 1rem
+  left 10%
+  right 10%
+  @media screen and (max-width: 1021px)
+    left 2%
+    right 2%
+
+.yy-nav .logo
+  /*margin-top -5rem*/
+  width 30%
+  border 1rem solid white
+  transform rotate(-20deg)
+  -ms-transform rotate(-20deg) /* IE 9 */
+  -webkit-transform rotate(-20deg) /* Chrome, Safari, Opera */
+
+.yy-nav .nav.yy-nav-menu
+  float right
+  font-family "Lato", sans-serif
+  font-size 2.0rem
+  @media screen and (max-width: 767px)
+    font-size:1.5rem
+
+.yy-nav .nav.yy-nav-menu li a
+  color #FFFFFF
+  padding 2rem
+
+.yy-nav .nav.yy-nav-menu li.active a
+  background-color rgba(255,255,255,.7)
+  color #000
+.yy-nav .nav.yy-nav-menu li:not(.active):hover a
+  /*transform scale(1.1,1.1)*/
+
+.yy-nav .navbar-text
+  margin-left 15px

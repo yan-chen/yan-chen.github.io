@@ -1,0 +1,105 @@
+.icon-lang {
+  width: 2rem;
+}
+.about-me-container .yy-name-card {
+  padding-bottom: 3rem;
+  text-align: right;
+  padding-right: 5%;
+}
+.about-me-container .yy-name-card .yy-name-text {
+  font-size: 3.5rem;
+}
+/*font-weight bolder*/
+.about-me-container .media-icon-group i.fa {
+  color: #dc9a6b;
+  margin-right: 0.5rem;
+}
+.about-me-container .media-icon-group i.fa:hover {
+  color: #b36a42;
+  transform: scale(1.3, 1.3);
+/*****************************************/
+}
+.resume-container .yy-info-container {
+  width: 100%;
+  background: #fff;
+  transform: rotate(-1deg);
+  -moz-transform: rotate(-1deg);
+  -webkit-transform: rotate(-1deg);
+  -o-transform: rotate(-1deg);
+  -moz-box-shadow: 0 0 1.5rem #ddd;
+  -webkit-box-shadow: 0 0 15px #ccc;
+  box-shadow: 0 0 1.5rem #ccc;
+  border: 0.1rem solid #d3d3d3;
+  margin: 1rem 0 3rem;
+  padding: 2rem;
+  position: relative;
+}
+.resume-container .yy-info-container.previous-info {
+  width: 100%;
+  background: #fff;
+  transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -moz-box-shadow: 0 0 1.5rem #ddd;
+  -webkit-box-shadow: 0 0 15px #ccc;
+  box-shadow: 0 0 1.5rem #ccc;
+  border: 0.1rem solid #d3d3d3;
+  margin: 1rem 0 3rem;
+  padding: 2rem;
+  position: relative;
+}
+.resume-container .yy-info-containerafter {
+  content: "";
+  background: #fff;
+  width: 99%;
+  height: 99%;
+  margin: 0 auto;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0.4rem;
+  transform: rotate(1deg);
+  -moz-transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+  -o-transform: rotate(1deg);
+  -moz-box-shadow: 0 0 2rem #ddd;
+  -webkit-box-shadow: 0 0 20px #ccc;
+  box-shadow: 0 0 2rem #ccc;
+  border: 0.1rem solid #ddd;
+}
+.resume-container .yy-info-container-title {
+  margin-left: 2rem;
+}
+.resume-container .yy-info-sub-title {
+  text-align: left;
+}
+@media only screen and (min-width: 768px) {
+  .resume-container .yy-info-sub-title {
+    text-align: right;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .resume-container .admin-login-btn {
+    margin-left: 2rem;
+    cursor: pointer;
+  }
+}
+.resume-container .work-logo-thumb {
+  max-width: 10rem;
+  max-height: 10rem;
+  border: none;
+  padding: 1rem;
+}
+/*
+.work-info-qtip
+    max-width 250px
+    width 2500px
+    height auto
+*/
+.work-info-qtip a {
+  color: #fff;
+}
+.work-info-qtip .qtip-content {
+  padding: 1rem 1.5rem;
+}

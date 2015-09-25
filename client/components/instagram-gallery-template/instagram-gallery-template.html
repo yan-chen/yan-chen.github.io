@@ -1,0 +1,16 @@
+<div ng-repeat-start="gallery in GalleryCtrl.allMyMedia track by $index"
+     class="gallery-thumb-box col-xs-4 col-sm-4 col-md-3 col-lg-2">
+  <div class="gallery-thumb-container" ng-click="viewDetails=!viewDetails">
+    <img src="{{gallery.images.thumbnail.url}}" class="full-width"/>
+  </div>
+  <div class="gallery-thumb-caption">{{gallery.location.name}}&nbsp;<br/>
+
+    <p><i class="fa fa-heart-o text-red"></i> {{gallery.likes.count}}</p></div>
+
+</div>
+<!--<div ng-if="viewDetails" class="clearfix" style="border:solid red 2px; height:30rem;">-->
+<!--<img src="{{gallery.images.standard_resolution.url}}" class="full-width"/>-->
+
+
+<!--</div>-->
+<div ng-repeat-end=""></div>

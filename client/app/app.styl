@@ -1,0 +1,112 @@
+@import "../bower_components/font-awesome/css/font-awesome.css";
+@import "../assets/fonts/Lato/latofonts.css";
+
+//
+// Font Awesome Fonts
+//
+
+@font-face
+  font-family: 'FontAwesome'
+  src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?v=4.1.0')
+  src: url('../bower_components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'),
+  url('../bower_components/font-awesome/fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'),
+  url('../bower_components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'),
+  url('../bower_components/font-awesome/fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  font-weight normal
+  font-style normal
+
+//
+// App-wide Styles
+//
+html, body
+  font-family "Lato", sans-serif
+  font-size 10px
+  @media screen and (max-width: 767px)
+    font-size 8px
+
+.yy-container
+  width 80%
+  max-width 120rem
+  margin 0 auto
+  clear both
+  font-size 1.6rem
+
+btn(border-color, bg-color, font-color)
+  border-color border-color
+  background bg-color
+  color font-color
+
+.btn-primary-transparent
+  btn(#336caf, transparent, #336caf)
+
+.btn-primary-transparent:hover
+  btn(#336caf, #336caf, #fff)
+
+.btn-primary-transparent:focus
+  btn(#336caf, #336caf, #fff)
+
+.btn-primary-transparent:active
+  btn(#336caf, #336caf, #fff)
+
+.btn-primary-transparent:visited
+  btn(#336caf, #336caf, #fff)
+
+.browserupgrade
+  background #ccc
+  color #000
+  margin 0.2em 0
+  padding 0.2em 0
+
+.float-left
+  float left
+
+.float-right
+  float right
+
+.text-left
+  text-align left
+
+.text-right
+  text-align right
+
+.text-red
+  color #ff0000
+
+.full-width
+  width 100%
+
+  /* creamy color theme */
+.creamy-pink
+  background #f9c2ce
+.creamy-yellow
+  background #fbcd34
+.creamy-blue
+  background #66b9d2
+.creamy-orange
+  background #f78d35
+.creamy-green-bright
+  background #3dd17f
+.creamy-green-light
+  background #b5d5c3
+.creamy-green-purple
+  background #6b3271
+
+
+// Responsive: Portrait tablets and up
+@media screen and (min-width: 768px)
+  .container
+    max-width 730px
+
+// Component styles are injected through grunt
+// injector
+@import 'gallery/gallery.styl';
+@import 'main/main.styl';
+@import 'portfolio/portfolio.styl';
+@import 'resume/resume.styl';
+@import '../components/example-todo/example-todo.styl';
+@import '../components/example-widget/example-widget.styl';
+@import '../components/footer/footer.styl';
+@import '../components/instagram-gallery-template/instagram-gallery-template.styl';
+@import '../components/navbar/navbar.styl';
+@import '../components/todo-example/todo.styl';
+// endinjector

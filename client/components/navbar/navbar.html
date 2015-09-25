@@ -1,0 +1,40 @@
+<div class="navbar navbar-default navbar-static-top yy-nav" ng-controller="NavbarCtrl as Nav">
+  <div class="nav-fade">
+    <div class="nav-container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" ng-click="Nav.isCollapsed = !Nav.isCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/" class="navbar-brand">
+          <img class="logo" src="assets/images/yan_thumb.jpg" alt=""/>
+        </a>
+      </div>
+      <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav yy-nav-menu">
+          <li ng-repeat="item in Nav.menu" ui-sref-active="active">
+            <a ui-sref="{{item.state}}"><i class="{{item.icon}}"></i> {{item.title}}</a>
+          </li>
+
+
+          <!--<li ng-controller="ResumeCtrl as ResumeCtrl" ng-if="ResumeCtrl.language==='ch'"-->
+              <!--ng-click="ResumeCtrl.changeLang('en')">-->
+            <!--<a>-->
+              <!--<img class="icon-lang" src="http://rowetechinc.com/wp-content/uploads/2013/03/us.jpg"/> English</a>-->
+          <!--</li>-->
+          <!--<li ng-controller="ResumeCtrl as ResumeCtrl" ng-if="ResumeCtrl.language==='en'"-->
+              <!--ng-click="ResumeCtrl.changeLang('ch')">-->
+            <!--<a>-->
+              <!--<img class="icon-lang"-->
+                   <!--src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People's_Republic_of_China.svg/1500px-Flag_of_the_People's_Republic_of_China.svg.png"/>-->
+              <!--中文</a>-->
+          <!--</li>-->
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
