@@ -1,42 +1,7 @@
-.deckgrid[deckgrid]::before
-  /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
-  content '4 .column.column-1-4'
-  font-size 0 /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
-  visibility hidden
 
-
-.deckgrid .column
-  float left
-
-
-.deckgrid .column-1-4
-  width 25%
 
 /*.yy-container.portfolio-container*/
 
-.portfolio-examples-container
-  width 100%
-
-.portfolio-examples-container .mockup-example-container
-  width 90%
-  float right
-  /*background #DC9A6B*/
-  background #b5d5c3
-  padding 2rem 3rem
-
-.portfolio-examples-container .example-wrapper
-  margin-bottom 3rem
-  width 90%
-  /*border-radius 0.5rem*/
-
-.portfolio-examples-container .example-image
-  width 100%
-
-.portfolio-examples-container .example-image-caption
-  padding 1rem 0 1rem
-  font-size 1.5rem
-  border-bottom solid #db9d6a 1px
-  color #643717
 /*-----------*/
 
 .widget-wrapper
@@ -69,8 +34,23 @@
   margin-bottom 10rem
 
 
+/*.portfolio-container .portfolio-widget-container-row:before*/
+  /*content "Coding Examples"*/
+  /*width 16rem*/
+  /*height 5rem*/
+  /*position absolute*/
+  /*top 0*/
+  /*background #66b9d2*/
+  /*padding 1rem*/
+  /*font-weight 900*/
+  /*color #fff*/
+  /*text-align center*/
+  /*transform rotate(-3deg)*/
+
 .portfolio-container .portfolio-widget-container
   padding 20px
+
+
 
 
 .portfolio-container .portfolio-panel

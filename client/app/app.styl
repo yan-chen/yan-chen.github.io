@@ -1,4 +1,4 @@
-@import '../bower_components/font-awesome/css/font-awesome.css';
+/*@import '../bower_components/font-awesome/css/font-awesome.css';*/
 /*@import '../assets/fonts/Lato/latofonts.css';*/
 
 //
@@ -24,6 +24,8 @@ html, body
   @media screen and (max-width: 767px)
     font-size 8px
 
+.ui-view-container.gallery-view
+  background #efefef
 .yy-container
   width 80%
   max-width 120rem
@@ -36,20 +38,40 @@ btn(border-color, bg-color, font-color)
   background bg-color
   color font-color
 
-.btn-primary-transparent
+.btn.btn-primary-transparent
   btn(#336caf, transparent, #336caf)
 
-.btn-primary-transparent:hover
+.btn.btn-primary-transparent:hover
   btn(#336caf, #336caf, #fff)
 
-.btn-primary-transparent:focus
+.btn.btn-primary-transparent:focus
   btn(#336caf, #336caf, #fff)
 
-.btn-primary-transparent:active
+.btn.btn-primary-transparent:active
   btn(#336caf, #336caf, #fff)
 
-.btn-primary-transparent:visited
+.btn.btn-primary-transparent:visited
   btn(#336caf, #336caf, #fff)
+
+
+.btn.btn-white
+  btn(#fff, #fff, #000)
+
+.btn.btn-primary-transparent:focus
+  btn(#fff, #fff, #000)
+  outline none
+
+.btn.btn-primary-transparent:visited
+  btn(#fff, #fff, #000)
+
+.margin-0
+  margin 0
+
+.padding-0
+  padding 0
+
+.padding-15-lr
+  padding 0 1.5rem
 
 .browserupgrade
   background #ccc
@@ -72,8 +94,14 @@ btn(border-color, bg-color, font-color)
 .text-red
   color #ff0000
 
+.text-xs
+  font-size 1.2rem
+
 .full-width
   width 100%
+
+.relative
+  position relative
 
   /* creamy color theme */
 .creamy-pink
@@ -106,6 +134,7 @@ btn(border-color, bg-color, font-color)
 @import '../components/example-todo/example-todo.styl';
 @import '../components/example-widget/example-widget.styl';
 @import '../components/footer/footer.styl';
+@import '../components/instagram-gallery-template-list/instagram-gallery-template-list.styl';
 @import '../components/instagram-gallery-template/instagram-gallery-template.styl';
 @import '../components/navbar/navbar.styl';
 @import '../components/todo-example/todo.styl';

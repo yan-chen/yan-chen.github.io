@@ -1,5 +1,19 @@
-<div ng-repeat-start="gallery in GalleryCtrl.allMyMedia track by $index"
-     class="gallery-thumb-box col-xs-4 col-sm-4 col-md-3 col-lg-2">
+<!--<div class="row">-->
+<!--<div class="gallery-container">-->
+<!--<div deckgrid source="GalleryCtrl.allMyMedia" class="deckgrid">-->
+<!--<div class="gallery-image-wrapper">-->
+<!--<img class="gallery-image full-width" src="{{card.images.low_resolution.url}}" alt=""/>-->
+
+<!--<div>{{card.location.name}}&nbsp;<br/>-->
+<!--<p><i class="fa fa-heart-o text-red"></i> {{card.likes.count}}</p></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+<div ng-repeat-start="gallery in galleries |orderBy:isReverse track by $index"
+     class="gallery-thumb-box col-xs-4 col-sm-4 col-md-3 col-lg-3">
   <div class="gallery-thumb-container" ng-click="viewDetails=!viewDetails">
     <img src="{{gallery.images.thumbnail.url}}" class="full-width"/>
   </div>

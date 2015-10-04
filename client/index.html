@@ -10,7 +10,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <base href="/">
+  <!--<base href="/">-->
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
@@ -19,18 +19,12 @@
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css" />
   <!-- endbower -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="assets/fonts/Lato/latofonts.css" />
   <!-- endbuild -->
   <!-- build:css({.tmp,client}) app/app.css -->
   <link rel="stylesheet" href="app/app.css">
   <!-- injector:css -->
-  <link rel="stylesheet" href="app/app.css">
-  <link rel="stylesheet" href="app/portfolio/portfolio.css">
-  <link rel="stylesheet" href="app/resume/resume.css">
-  <link rel="stylesheet" href="components/example-widget/example-widget.css">
-  <link rel="stylesheet" href="components/footer/footer.css">
-  <link rel="stylesheet" href="components/instagram-gallery-template/instagram-gallery-template.css">
-  <link rel="stylesheet" href="components/navbar/navbar.css">
-  <link rel="stylesheet" href="components/todo-example/todo.css">
   <!-- endinjector -->
   <!-- endbuild -->
 </head>
@@ -41,8 +35,10 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
+
 <navbar></navbar>
 <div ui-view=""></div>
+
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
@@ -76,8 +72,6 @@
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/lodash/dist/lodash.compat.js"></script>
 <!-- endbower -->
-<script src="lib/instafeed.js"></script>
-
 <!-- endbuild -->
 <!-- build:js({.tmp,client}) app/app.js -->
 <script src="app/app.js"></script>
@@ -95,6 +89,7 @@
 <script src="components/example-todo/example-todo.directive.js"></script>
 <script src="components/example-widget/example-widget.directive.js"></script>
 <script src="components/footer/footer.directive.js"></script>
+<script src="components/instagram-gallery-template-list/instagram-gallery-template-list.directive.js"></script>
 <script src="components/instagram-gallery-template/instagram-gallery-template.directive.js"></script>
 <script src="components/navbar/navbar.controller.js"></script>
 <script src="components/navbar/navbar.directive.js"></script>

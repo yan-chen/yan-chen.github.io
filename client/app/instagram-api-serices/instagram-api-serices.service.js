@@ -11,11 +11,12 @@ function InstagramApiServices($http, $templateCache) {
   var clientId = '2bebdf6a7b71473f86629687183d3a62';
   var token = '2180465817.467ede5.b539e364139049fdb1e1637a81337a61';
   var urlPrefix = 'https://api.instagram.com/v1/';
-  var urlPostfix = '?access_token=' + token + '&count=1000&callback=JSON_CALLBACK';
+  var urlPostfix = '?access_token=' + token + '&count=600&callback=JSON_CALLBACK';
 
 
   return ({
     getMyMedia: getMyMedia,
+    getUserId: getUserId,
     getUser: getUser,
     getUserRecentMedia: getUserRecentMedia,
     getUserFeed: getUserFeed,
@@ -56,8 +57,13 @@ function InstagramApiServices($http, $templateCache) {
     return getData(url);
   }
 
+  function getUserId(username) {
+    var url = urlPrefix + 'users/search?q=' + username + '&access_token=' + token + '&callback=JSON_CALLBACK';
+    return getData(url);
+  }
+
   function getUser(userId) {
-    var url = urlPrefix + 'users/' + userId + '/media/recent' + urlPostfix;
+    var url = urlPrefix + 'users/' + userId + urlPostfix;
     return getData(url);
   }
 

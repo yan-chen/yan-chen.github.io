@@ -14,7 +14,7 @@ module.exports = function (grunt) {
     express: 'grunt-express-server',
     useminPrepare: 'grunt-usemin',
     ngtemplates: 'grunt-angular-templates',
-    cdnify: 'grunt-google-cdn',
+    //cdnify: 'grunt-google-cdn',
     protractor: 'grunt-protractor-runner',
     buildcontrol: 'grunt-build-control',
     istanbul_check_coverage: 'grunt-mocha-istanbul'
@@ -62,10 +62,10 @@ module.exports = function (grunt) {
         ],
         tasks: ['injector:scripts']
       },
-      injectCss: {
-        files: ['<%= yeoman.client %>/{app,components}/**/*.css'],
-        tasks: ['injector:css']
-      },
+      //injectCss: {
+      //  files: ['<%= yeoman.client %>/{app,components}/**/*.css'],
+      //  tasks: ['injector:css']
+      //},
       mochaTest: {
         files: ['server/**/*.{spec,integration}.js'],
         tasks: ['env:test', 'mochaTest']
@@ -74,7 +74,7 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.client %>/{app,components}/**/*.{spec,mock}.js'],
         tasks: ['newer:jshint:all', 'wiredep:test', 'karma']
       },
-      injectStylus: {
+      injectimage: {
         files: ['<%= yeoman.client %>/{app,components}/**/*.styl'],
         tasks: ['injector:stylus']
       },
@@ -264,7 +264,7 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/client',
           '<%= yeoman.dist %>/client/assets/images'
         ],
-        // This is so we update image references in our ng-templates
+        //This is so we update image references in our ng-templates
         patterns: {
           js: [
             [/(assets\/images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
@@ -327,11 +327,11 @@ module.exports = function (grunt) {
     },
 
     // Replace Google CDN references
-    cdnify: {
-      dist: {
-        html: ['<%= yeoman.dist %>/client/*.html']
-      }
-    },
+    //cdnify: {
+    //  dist: {
+    //    html: ['<%= yeoman.dist %>/client/*.html']
+    //  }
+    //},
 
     // Copies remaining files to places other tasks can use
     copy: {
@@ -345,6 +345,8 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/**/*',
+            'assets/examples/{,*/}*.*',
+            'assets/data/{,*/}*.*',
             'assets/images/{,*/}*.{webp}',
             'assets/fonts/**/*',
             'index.html'
@@ -353,6 +355,21 @@ module.exports = function (grunt) {
           expand: true,
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/client/assets/images',
+          src: ['generated/*']
+        },{
+          expand: true,
+          cwd: '.tmp/data',
+          dest: '<%= yeoman.dist %>/client/assets/data',
+          src: ['generated/*']
+        }, {
+          expand: true,
+          cwd: '.tmp/fonts',
+          dest: '<%= yeoman.dist %>/client/assets/fonts',
+          src: ['generated/*']
+        }, {
+          expand: true,
+          cwd: '.tmp/examples',
+          dest: '<%= yeoman.dist %>/client/assets/examples',
           src: ['generated/*']
         }, {
           expand: true,
@@ -571,7 +588,7 @@ module.exports = function (grunt) {
           ]
         }
       }
-    },
+    }
   });
 
   // Used for delaying livereload until after server has restarted
@@ -732,7 +749,7 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'cdnify',
+    //'cdnify',
     'cssmin',
     'uglify',
     'filerev',

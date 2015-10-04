@@ -1,0 +1,24 @@
+[
+  {
+    "major": "Business Information Systems",
+    "level":"Master of Science (M.S.)",
+    "school": "University of Utah",
+    "schoolUrl": "http://www.utah.edu/",
+    "schoolLogo": "assets/images/logos/logo_uu.png",
+    "location": "Salt Lake City, Utah",
+    "startYear": "2014",
+    "endYear": "Present",
+    "description":[]
+  },
+  {
+    "major": "Business Information Systems",
+    "level":"Bachelors' of Science (B.S.)",
+    "school": "University of Utah",
+    "schoolUrl": "http://www.utah.edu/",
+    "schoolLogo": "assets/images/logos/logo_uu.png",
+    "location": "Salt Lake City, Utah",
+    "startYear": "2010",
+    "endYear": "2013",
+    "description": []
+  }
+  ]

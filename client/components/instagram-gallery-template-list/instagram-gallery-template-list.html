@@ -1,0 +1,38 @@
+<div class="row gallery-row">
+  <div ng-repeat-start="gallery in galleries|orderBy:isReverse  track by $index" class="col-lg-12 gallery-list-row-container">
+    <div class="gallery-list-row">
+      <div class="row">
+        <div class="gallery-list-image col-lg-6 col-md-6 col-sm-6 com-xs-8">
+          <a href="{{gallery.link}}" target="_blank" data-toggle="tooltip" data-placement="right"
+             title="{{gallery.images.standard_resolution.url}}">
+            <img src="{{gallery.images.standard_resolution.url}}" class="full-width"/>
+          </a>
+        </div>
+        <div class="gallery-list-caption col-lg-6 col-md-6 col-sm-6 com-xs-6">
+          <span class="float-right gallery-index">#{{$index}}</span>
+          <h4><a href="https://instagram.com/explore/locations/{{gallery.location.id}}/">{{gallery.location.name}}</a>
+          </h4>
+          <h5 ng-if="gallery.location===null">Location Unspecified</h5>
+          <!--https://instagram.com/explore/tags/-->
+          <p>
+            <i class="fa fa-heart-o text-red"></i> {{gallery.likes.count}} {{parseInt(gallery.created_time)}}
+            <span class="float-right gallery-date">{{gallery.created_time*1000| date:'MMM dd, yyyy'}}</span>
+          </p>
+          <hr/>
+          <p class="gallery-image-caption">{{gallery.caption.text}}</p>
+
+          <div ng-repeat="comment in gallery.comments.data track by $index">
+            <div class="gallery-image-comment">
+              <a href="https://instagram.com/{{comment.from.username}}">
+                <img src="{{comment.from.profile_picture}}" class="img-circle"/>
+                <strong>{{comment.from.username}}</strong></a>
+              &nbsp;&nbsp;&nbsp;{{comment.text}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-repeat-end=""></div>
+</div>

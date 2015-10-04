@@ -4,25 +4,33 @@ angular
   .module('yyPageApp')
   .controller('GalleryCtrl', GalleryCtrl);
 
-GalleryCtrl.$inject = ['myInstagramGalleries'];
+GalleryCtrl.$inject = ['InstagramApiServices', 'myInstagramGalleries', 'myInstagramAccount'];
 
-function GalleryCtrl(myInstagramGalleries) {
+function GalleryCtrl(InstagramApiServices, myInstagramGalleries, myInstagramAccount) {
 
-console.log(myInstagramGalleries.data)
-this.allMyMedia = myInstagramGalleries.data;
+  var _this = this;
+  console.log(myInstagramGalleries.data);
+  _this.isGridView = true;
+  _this.reverseOrder = null;
+  _this.allMyMedia = myInstagramGalleries.data;
+  _this.myAccount = myInstagramAccount.data;
 
-  //----using instafeed plugin -----
-  //$scope.feed = new Instafeed({
-  //  get: 'user',
-  //  userId: 2180465817,
-  //  accessToken: '2180465817.467ede5.b539e364139049fdb1e1637a81337a61',
-  //  //template:"<div instagram-gallery-template=''></div>"
-  //  template: '<div class="gallery-thumb-box col-xs-4 col-sm-4 col-md-3 col-lg-2">' +
-  //  '<a href="{{link}}"><img src="{{image}}" class="full-width"/></a>' +
-  //  '<div class="gallery-thumb-caption">{{location}}&nbsp;<br/>' +
-  //  '<p><i class="fa fa-heart-o text-red"></i> {{likes}}</p></div>' +
-  //  '</div>'
-  //});
-  //$scope.feed.run();
+  _this.currentUser = _this.myAccount;
+  _this.currentMedia = _this.allMyMedia;
+
+  _this.changeUser = function (username) {
+    return InstagramApiServices.getUserId(username).then(function (response) {
+
+      InstagramApiServices.getUser(response.data[0].id).then(function (response) {
+        _this.currentUser = response.data;
+        InstagramApiServices.getUserRecentMedia(response.data.id).then(function (response) {
+          _this.currentMedia = response.data;
+          console.log(_this.currentUser);
+          console.log(_this.currentMedia);
+        });
+      });
+    });
+  }
+
 
 }

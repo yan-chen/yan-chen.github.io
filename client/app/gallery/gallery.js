@@ -11,6 +11,9 @@ angular.module('yyPageApp')
         resolve:{
           myInstagramGalleries:function(InstagramApiServices){
             return InstagramApiServices.getMyMedia();
+          },
+          myInstagramAccount:function(InstagramApiServices){
+            return InstagramApiServices.getUser(2180465817);
           }
         }
       });
