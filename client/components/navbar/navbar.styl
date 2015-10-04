@@ -9,6 +9,9 @@
   @media screen and (max-width: 500px)
     height 12rem
 
+.yy-nav.isAsideOpen
+  right 15rem
+
 .yy-nav .nav-fade
   width 100%
   height 100%
@@ -23,13 +26,17 @@
     left 2%
     right 2%
 
+.yy-nav .nav-container .navbar-toggle
+  margin-bottom -3rem
+
 .yy-nav .logo
-  /*margin-top -5rem*/
   width 30%
   border 1rem solid white
   transform rotate(-20deg)
   -ms-transform rotate(-20deg) /* IE 9 */
   -webkit-transform rotate(-20deg) /* Chrome, Safari, Opera */
+  @media screen and (max-width: 640px)
+    width 40%
 
 .yy-nav .nav.yy-nav-menu
   float right

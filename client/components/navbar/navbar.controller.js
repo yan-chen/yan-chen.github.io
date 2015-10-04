@@ -14,15 +14,9 @@ function NavbarCtrl() {
       'state': 'about'
     },
     {
-      'title': '|'
-    },
-    {
       'title': 'Portfolio',
       'icon': 'fa fa-folder-open',
       'state': 'portfolio'
-    },
-    {
-      'title': '|'
     },
     {
       'title': 'Gallery',
@@ -31,6 +25,10 @@ function NavbarCtrl() {
     }
   ];
 
-  this.isCollapsed = true;
+  this.isAsideVisible = false;
+  this.toggleAsideNav = function () {
+    this.isAsideVisible = !this.isAsideVisible;
+    console.log(this.isAsideVisible);
+  };
 
 }

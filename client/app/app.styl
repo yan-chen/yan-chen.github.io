@@ -24,14 +24,34 @@ html, body
   @media screen and (max-width: 767px)
     font-size 8px
 
+body.isAsideOpen
+  overflow hidden
+
+body.isAsideOpen .ui-view-container
+  position relative
+  margin-right 15rem
+
+body.isAsideOpen  .ui-view-fade.hidden
+  display block!important
+  background rgba(0,0,0,.6)
+  z-index 5
+  position: absolute
+  left 0
+  right 15rem
+  top 0
+  bottom 0
+  overflow hidden
+
 .ui-view-container.gallery-view
   background #efefef
+
 .yy-container
   width 80%
   max-width 120rem
   margin 0 auto
   clear both
   font-size 1.6rem
+
 
 btn(border-color, bg-color, font-color)
   border-color border-color
@@ -137,5 +157,6 @@ btn(border-color, bg-color, font-color)
 @import '../components/instagram-gallery-template-list/instagram-gallery-template-list.styl';
 @import '../components/instagram-gallery-template/instagram-gallery-template.styl';
 @import '../components/navbar/navbar.styl';
+@import '../components/navside/navside.styl';
 @import '../components/todo-example/todo.styl';
 // endinjector

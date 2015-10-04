@@ -10,7 +10,13 @@
 
 .about-me-container .yy-name-card .yy-name-text
   font-size 3.5rem
-/*font-weight bolder*/
+  @media screen and (max-width: 640px)
+    font-size 2.5rem
+
+.about-me-container .yy-name-card .yy-name-card-titles
+  font-size 2.5rem
+  @media screen and (max-width: 640px)
+    font-size 1.6rem
 
 .about-me-container .media-icon-group i.fa
   color #DC9A6B
@@ -53,7 +59,7 @@
   position relative
 
 
-.resume-container .yy-info-containerafter
+.resume-container .yy-info-container:after
   content ""
   background #fff
   width 99%
