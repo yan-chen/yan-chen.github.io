@@ -5,7 +5,7 @@ module.exports = function (grunt) {
   var localConfig;
   try {
     localConfig = require('./server/config/local.env');
-  } catch(e) {
+  } catch (e) {
     localConfig = {};
   }
 
@@ -106,7 +106,7 @@ module.exports = function (grunt) {
       bower: {
         files: ['bower.json'],
         tasks: ['wiredep']
-      },
+      }
     },
 
     // Make sure code styles are up to par and there are no obvious mistakes
@@ -344,33 +344,33 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             '.htaccess',
-            'bower_components/**/*',
+            'bower_components/{,*/}*.*',
             'assets/examples/{,*/}*.*',
             'assets/data/{,*/}*.*',
             'assets/images/{,*/}*.{webp}',
-            'assets/fonts/**/*',
+            'assets/fonts/{,*/}*.*',
             'index.html'
           ]
         }, {
           expand: true,
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/client/assets/images',
-          src: ['generated/*']
-        },{
+          src: ['generated/{,*/}*.*']
+        }, {
           expand: true,
           cwd: '.tmp/data',
           dest: '<%= yeoman.dist %>/client/assets/data',
-          src: ['generated/*']
+          src: ['generated/{,*/}*.*']
         }, {
           expand: true,
           cwd: '.tmp/fonts',
           dest: '<%= yeoman.dist %>/client/assets/fonts',
-          src: ['generated/*']
+          src: ['generated/{,*/}*.*']
         }, {
           expand: true,
           cwd: '.tmp/examples',
           dest: '<%= yeoman.dist %>/client/assets/examples',
-          src: ['generated/*']
+          src: ['generated/{,*/}*.*']
         }, {
           expand: true,
           dest: '<%= yeoman.dist %>',
@@ -522,19 +522,17 @@ module.exports = function (grunt) {
           "include css": true
         },
         files: {
-          '.tmp/app/app.css' : '<%= yeoman.client %>/app/app.styl'
+          '.tmp/app/app.css': '<%= yeoman.client %>/app/app.styl'
         }
       }
     },
 
     injector: {
-      options: {
-
-      },
+      options: {},
       // Inject application script files into index.html (doesn't include bower)
       scripts: {
         options: {
-          transform: function(filePath) {
+          transform: function (filePath) {
             filePath = filePath.replace('/client/', '');
             filePath = filePath.replace('/.tmp/', '');
             return '<script src="' + filePath + '"></script>';
@@ -544,18 +542,18 @@ module.exports = function (grunt) {
         },
         files: {
           '<%= yeoman.client %>/index.html': [
-               [
-                 '{.tmp,<%= yeoman.client %>}/{app,components}/**/!(*.spec|*.mock).js',
-                 '!{.tmp,<%= yeoman.client %>}/app/app.js'
-               ]
+            [
+              '{.tmp,<%= yeoman.client %>}/{app,components}/**/!(*.spec|*.mock).js',
+              '!{.tmp,<%= yeoman.client %>}/app/app.js'
             ]
+          ]
         }
       },
 
       // Inject component styl into app.styl
       stylus: {
         options: {
-          transform: function(filePath) {
+          transform: function (filePath) {
             filePath = filePath.replace('/client/app/', '');
             filePath = filePath.replace('/client/components/', '../components/');
             return '@import \'' + filePath + '\';';
@@ -574,7 +572,7 @@ module.exports = function (grunt) {
       // Inject component css into index.html
       css: {
         options: {
-          transform: function(filePath) {
+          transform: function (filePath) {
             filePath = filePath.replace('/client/', '');
             filePath = filePath.replace('/.tmp/', '');
             return '<link rel="stylesheet" href="' + filePath + '">';
@@ -603,7 +601,7 @@ module.exports = function (grunt) {
     }, 1500);
   });
 
-  grunt.registerTask('express-keepalive', 'Keep grunt running', function() {
+  grunt.registerTask('express-keepalive', 'Keep grunt running', function () {
     this.async();
   });
 
@@ -645,7 +643,7 @@ module.exports = function (grunt) {
     grunt.task.run(['serve']);
   });
 
-  grunt.registerTask('test', function(target, option) {
+  grunt.registerTask('test', function (target, option) {
     if (target === 'server') {
       return grunt.task.run([
         'env:all',
@@ -732,9 +730,9 @@ module.exports = function (grunt) {
     }
 
     else grunt.task.run([
-      'test:server',
-      'test:client'
-    ]);
+        'test:server',
+        'test:client'
+      ]);
   });
 
   grunt.registerTask('build', [
