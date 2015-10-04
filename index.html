@@ -16,9 +16,9 @@
   <meta name="viewport" content="width=device-width">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <link rel="stylesheet" href="app/vendor.7de04aad.css">
-  <link rel="stylesheet" href="app/app.ce12e65b.css">
+  <link rel="stylesheet" href="app/app.4ec16427.css">
 </head>
-<body ng-app="yyPageApp">
+<body ng-app="yyPageApp" ng-controller="NavbarCtrl" ng-class="{'isAsideOpen':NavCtrl.isAsideVisible}">
 <!--[if lt IE 7]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
   your browser</a> to improve your experience.</p>
@@ -27,7 +27,9 @@
 <!-- Add your site or application content here -->
 
 <navbar></navbar>
-<div ui-view=""></div>
+<navside></navside>
+<div ui-view class="ui-view-container"></div>
+<div class="ui-view-fade hidden" ng-click="NavCtrl.toggleAsideNav()"></div>
 
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -53,6 +55,6 @@
 <script src="bower_components/json3/lib/json3.min.js"></script>
 <![endif]-->
 <script src="app/vendor.53cc9953.js"></script>
-<script src="app/app.6f87e110.js"></script>
+<script src="app/app.adeccfa5.js"></script>
 </body>
 </html>
