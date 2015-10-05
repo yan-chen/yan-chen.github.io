@@ -31,9 +31,9 @@ body.isAsideOpen .ui-view-container
   position relative
   margin-right 15rem
 
-body.isAsideOpen  .ui-view-fade.hidden
-  display block!important
-  background rgba(0,0,0,.6)
+body.isAsideOpen .ui-view-fade.hidden
+  display block !important
+  background rgba(0, 0, 0, .6)
   z-index 5
   position: absolute
   left 0
@@ -51,6 +51,7 @@ body.isAsideOpen  .ui-view-fade.hidden
   margin 0 auto
   clear both
   font-size 1.6rem
+
 
 
 btn(border-color, bg-color, font-color)
@@ -72,7 +73,6 @@ btn(border-color, bg-color, font-color)
 
 .btn.btn-primary-transparent:visited
   btn(#336caf, #336caf, #fff)
-
 
 .btn.btn-white
   btn(#fff, #fff, #000)
@@ -114,8 +114,15 @@ btn(border-color, bg-color, font-color)
 .text-red
   color #ff0000
 
+.text-black
+  color #000
+
 .text-xs
   font-size 1.2rem
+.text-1x
+  font-size 1.6rem
+.text-2x
+  font-size 2.0rem
 
 .full-width
   width 100%
@@ -123,27 +130,45 @@ btn(border-color, bg-color, font-color)
 .relative
   position relative
 
-  /* creamy color theme */
-.creamy-pink
-  background #f9c2ce
-.creamy-yellow
-  background #fbcd34
-.creamy-blue
-  background #66b9d2
-.creamy-orange
-  background #f78d35
-.creamy-green-bright
-  background #3dd17f
-.creamy-green-light
-  background #b5d5c3
-.creamy-green-purple
-  background #6b3271
+/* creamy color theme */
+$yy-pink = #f9c2ce
+$yy-pink-light = #FBE0E6
+$yy-yellow = #fbcd34
+$yy-blue = #66b9d2
+$yy-blue-light = #AFDDE8
+$yy-orange = #f78d35
+$yy-orange-pale = #DC9A6B
+$yy-orange-pale-light = #EECCB2
+$yy-orange-heavy = #B36A42
+$yy-green-bright = #3dd17f
+$yy-green-light = #b5d5c3
+$yy-green-purple = #6b3271
+$yy-red = #ff0000
+$yy-gray-light = #eeeeee
 
 
-// Responsive: Portrait tablets and up
-@media screen and (min-width: 768px)
-  .container
-    max-width 730px
+/* for toolbar in all yy-container*/
+.yy-container .yy-toolbar
+  padding 1rem 1rem 0.5rem 1rem
+  border-bottom solid $yy-orange-pale-light 3px
+  margin-bottom 3rem
+  vertical-align bottom
+
+.yy-container .yy-toolbar .tool-icon
+  color $yy-orange-pale
+  margin-left 2rem
+  cursor pointer
+
+.yy-container .yy-toolbar .tool-icon.active
+  color $yy-orange-heavy
+
+.yy-container .yy-toolbar .tool-icon i
+  font-size 2.3rem
+
+.yy-container .yy-toolbar .tool-icon:hover
+  color $yy-orange-heavy
+/**/
+
 
 // Component styles are injected through grunt
 // injector
@@ -158,5 +183,7 @@ btn(border-color, bg-color, font-color)
 @import '../components/instagram-gallery-template/instagram-gallery-template.styl';
 @import '../components/navbar/navbar.styl';
 @import '../components/navside/navside.styl';
+@import '../components/resume-panel/resume-panel.styl';
+@import '../components/resume-timeline/resume-timeline.styl';
 @import '../components/todo-example/todo.styl';
 // endinjector

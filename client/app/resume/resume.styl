@@ -7,100 +7,35 @@
   padding-bottom 3rem
   text-align right
   padding-right 5%
+  color #9c9c9c
 
 .about-me-container .yy-name-card .yy-name-text
-  font-size 3.5rem
-  @media screen and (max-width: 640px)
-    font-size 2.5rem
+  color $yy-orange-heavy
+  font-size 3.2rem
+  @media screen and (max-width: 767px)
+    font-size 2.2rem
 
 .about-me-container .yy-name-card .yy-name-card-titles
-  font-size 2.5rem
-  @media screen and (max-width: 640px)
+  font-size 1.8rem
+  @media screen and (max-width: 767px)
     font-size 1.6rem
 
 .about-me-container .media-icon-group i.fa
-  color #DC9A6B
+  color $yy-orange-pale
   margin-right 0.5rem
 
 .about-me-container .media-icon-group i.fa:hover
-  color #B36A42
+  color $yy-orange-heavy
   transform scale(1.3,1.3)
 
   /*****************************************/
 
-.resume-container .yy-info-container
-  width 100%
-  background #fff
-  transform rotate(-1deg)
-  -moz-transform rotate(-1deg)
-  -webkit-transform rotate(-1deg)
-  -o-transform rotate(-1deg)
-  -moz-box-shadow 0 0 1.5rem #DDD
-  -webkit-box-shadow 0 0 15px #CCC
-  box-shadow 0 0 1.5rem #CCC
-  border 0.1rem solid #d3d3d3
-  margin 1rem 0 3rem
-  padding 2rem
-  position relative
+.yy-container.resume-container
+  width 95%
+  max-width 140rem
 
-.resume-container .yy-info-container.previous-info
-  width 100%
-  background #fff
-  transform rotate(0deg)
-  -moz-transform rotate(0deg)
-  -webkit-transform rotate(0deg)
-  -o-transform rotate(0deg)
-  -moz-box-shadow 0 0 1.5rem #DDD
-  -webkit-box-shadow 0 0 15px #CCC
-  box-shadow 0 0 1.5rem #CCC
-  border 0.1rem solid #d3d3d3
-  margin 1rem 0 3rem
-  padding 2rem
-  position relative
-
-
-.resume-container .yy-info-container:after
-  content ""
-  background #fff
-  width 99%
-  height 99%
-  margin 0 auto
-  position absolute
-  z-index -1
-  top 0
-  left 0.4rem
-  transform rotate(1deg)
-  -moz-transform rotate(1deg)
-  -webkit-transform rotate(1deg)
-  -o-transform rotate(1deg)
-  -moz-box-shadow 0 0 2rem #DDD
-  -webkit-box-shadow 0 0 20px #CCC
-  box-shadow 0 0 2rem #CCC
-  border 0.1rem solid #ddd
-
-
-.resume-container .yy-info-container-title
-  margin-left 2rem
-
-.resume-container .yy-info-sub-title
-  text-align left
-  @media only screen and (min-width 768px)
-      text-align right
-
-
-
-.resume-container .admin-login-btn
-  @media only screen and (min-width 768px)
-    margin-left 2rem
-    cursor pointer
-
-
-
-.resume-container .work-logo-thumb
-  max-width 10rem
-  max-height 10rem
-  border none
-  padding 1rem
+.yy-container.resume-container .yy-toolbar
+  /*margin 0 3rem 5rem*/
 
 /*
 .work-info-qtip
@@ -117,3 +52,22 @@
   padding 1rem 1.5rem
 
 
+
+.yy-container.resume-container .timeline-view .yy-info-container
+  width 60%
+  margin 0 auto 5rem
+  @media screen and (max-width 767px)
+    width 90%
+
+.yy-container.resume-container .timeline-view .yy-info-container .yy-info-title
+  color $yy-orange-pale
+  margin-bottom 1rem
+
+.yy-container.resume-container .timeline-view .yy-info-container .yy-info-details
+  background $yy-gray-light
+  padding 2rem 2rem 1rem 2rem
+  border-radius 0.5rem
+
+.yy-container.resume-container .timeline-view .yy-info-container p
+  margin-bottom 1.5rem
+  line-height 2.0rem

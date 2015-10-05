@@ -1,0 +1,112 @@
+/* Styles go here */
+.yy-timeline-box
+  position relative
+  padding 3rem
+
+
+.yy-timeline-box.left
+  margin-right 50%
+
+.yy-timeline-box.right
+  margin-left 50%
+  @media screen and (max-width 767px)
+    margin-left 8rem
+
+
+.yy-timeline-box:before
+  content ''
+  position absolute
+  width 0.5rem
+  height 100%
+  background $yy-gray-light
+  top 0
+
+
+.yy-timeline-box.left:before
+  right -0.25rem
+
+.yy-timeline-box.right:before
+  left -0.25rem
+
+.yy-timeline-box.left .yy-timeline-box-inner
+  padding-right 6rem
+
+.yy-timeline-box.right .yy-timeline-box-inner
+  padding-left 6rem
+
+.yy-timeline-box .yy-timeline-box-inner .yy-timeline-date
+  position absolute
+  color $yy-orange-pale
+  text-align center
+  font-size 2rem
+  background #fff
+  padding 1rem
+
+.yy-timeline-box.left .yy-timeline-box-inner .yy-timeline-date
+  top 3rem
+  right -5rem
+
+.yy-timeline-box.right .yy-timeline-box-inner .yy-timeline-date
+  top 3rem
+  left -5rem
+  @media screen and (max-width 767px)
+    top 5rem
+
+.yy-timeline-box .yy-timeline-box-inner .yy-timeline-image-container
+  position absolute
+  padding-top 2rem
+  width 10rem
+  background #fff
+
+
+.yy-timeline-box.right .yy-timeline-box-inner .yy-timeline-image-container
+  left -20rem
+  @media screen and (max-width 767px)
+    left -5rem
+
+.yy-timeline-box.left .yy-timeline-box-inner .yy-timeline-image-container
+  right -20rem
+
+
+.yy-timeline-box .yy-timeline-box-inner .yy-timeline-content
+  position relative
+  border-radius 0.5rem
+  padding 2rem 2rem 1rem 2rem
+  background-color $yy-gray-light
+  @media screen and (max-width 767px)
+    margin-top 2rem
+
+
+.yy-timeline-box .yy-timeline-box-inner .yy-timeline-content:before
+  content ''
+  position absolute
+  top 2rem
+  border 1rem solid transparent
+
+.yy-timeline-box.right .yy-timeline-box-inner .yy-timeline-content:before
+  left -1.9rem
+  border-right 1rem solid $yy-gray-light
+
+
+.yy-timeline-box.left .yy-timeline-box-inner .yy-timeline-content:before
+  right -1.9rem
+  border-left 1rem solid $yy-gray-light
+
+
+.yy-timeline-box .yy-timeline-box-inner .yy-timeline-content .yy-timeline-title
+  color $yy-orange-pale
+  margin-bottom 0.5rem
+  font-size 2rem
+  font-family "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial
+
+.yy-timeline-box .yy-timeline-box-inner .yy-timeline-content .yy-timeline-location
+  color $yy-orange-heavy
+  margin-bottom 1rem
+  font-size 1.4rem
+  font-style italic
+
+
+.yy-timeline-box .yy-timeline-box-inner .yy-timeline-content li
+  margin-bottom 1.3rem
+  line-height 2.0rem
+  letter-spacing 0.02rem

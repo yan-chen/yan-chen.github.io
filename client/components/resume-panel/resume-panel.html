@@ -1,0 +1,148 @@
+<div class="resume-panel">
+
+  <div class="yy-info-container" ng-if="ResumeCtrl.language==='en'">
+    <div class="yy-info-container-title">
+      <h4>My Summary of Skills ...</h4>
+    </div>
+    <hr class="title-separator-bold"/>
+
+    <div class="row">
+      <div class="col-md-3 col-sm-3 yy-info-sub-title">
+        <p><strong>UI/UX & Web:</strong></p>
+      </div>
+      <div class="clo-md-9 col-sm-9">
+        <p>HTML, CSS, Stylus, JavaScript, AngularJS, JSON, Bootstrap, Responsive Web Design, Wireframe, Prototype</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 yy-info-sub-title">
+        <p><strong>Database:</strong></p>
+      </div>
+      <div class="clo-md-9 col-sm-9">
+        <p>SQL, MySQL, VBA, Microsoft Access</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 yy-info-sub-title">
+        <p><strong>Tools:</strong></p>
+      </div>
+      <div class="clo-md-9 col-sm-9">
+        <p>Git, WebStorm, Sketch, Illustrator, Microsoft Office Suite, Agile</p>
+      </div>
+    </div>
+  </div>
+  <div class="yy-info-container" ng-if="ResumeCtrl.language==='ch'">
+    <div class="yy-info-container-title">
+      <h4>我的职业 ...</h4>
+    </div>
+    <hr class="title-separator-bold"/>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 yy-info-sub-title">
+        <p><strong>用户界面/用户经验和网页的设计与开发:</strong></p>
+      </div>
+      <div class="clo-md-9 col-sm-9">
+        <p>HTML, CSS, Stylus, JavaScript, AngularJS, JSON, Bootstrap, Responsive Web Design, Wireframe, Prototype</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 yy-info-sub-title"><p><strong>数据库管理:</strong></p></div>
+      <div class="clo-md-9 col-sm-9"><p>SQL, MySQL, VBA, Microsoft Access</p></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-3 yy-info-sub-title">
+        <p><strong>工具:</strong></p>
+      </div>
+      <div class="clo-md-9 col-sm-9">
+        <p>Git, WebStorm, Sketch, Illustrator, Microsoft Office Suite, Agile</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!--   /////////////////////////////////////   -->
+
+  <div class="yy-info-container">
+    <div class="yy-info-container-title">
+      <h4 ng-if="ResumeCtrl.language==='en'">My Education ...</h4>
+      <h4 ng-if="ResumeCtrl.language==='ch'">我的学历 ...</h4>
+    </div>
+    <hr class="title-separator-bold"/>
+
+    <div ng-repeat="education in ResumeCtrl.educationHistory track by $index">
+      <div class="row">
+        <div class="col-md-2 col-sm-2">
+          <a href="{{::education.schoolUrl}}">
+            <img class="work-logo-thumb" ng-src="{{::education.schoolLogo}}" alt="{{::education.school}}"/></a>
+        </div>
+        <div class="col-md-10 col-sm-10">
+          <h5><strong>{{::education.major}}</strong>, {{::education.level}} ( {{::education.startYear}} -
+            {{::education.endYear}} )</h5>
+          <ul>
+            <li ng-repeat="description in education.description track by $index">{{::description}}</li>
+          </ul>
+        </div>
+      </div>
+      <hr/>
+
+    </div>
+
+  </div>
+  <!--   /////////////////////////////////////   -->
+
+  <div class="yy-info-container">
+    <div class="yy-info-container-title">
+      <h4 ng-if="ResumeCtrl.language==='en'">My current work ...</h4>
+      <h4 ng-if="ResumeCtrl.language==='ch'">我现在的工作 ...</h4>
+    </div>
+    <hr class="title-separator-bold"/>
+
+    <div class="row">
+      <div class="col-md-2 col-sm-2">
+        <a href="http://www.usana.com">
+          <img class="work-logo-thumb"
+               src="https://lh6.googleusercontent.com/-Ir2BZXfhr-0/AAAAAAAAAAI/AAAAAAAAAO0/J_aRmm9Ggi4/photo.jpg"
+               alt="usana">
+        </a>
+      </div>
+
+      <div class="col-md-10 col-sm-10">
+        <h5><strong>{{::ResumeCtrl.workHistory[0].title}}</strong> ( {{::ResumeCtrl.workHistory[0].startYear}} -
+          {{::ResumeCtrl.workHistory[0].endYear}}
+          )</h5>
+        <ul>
+          <li ng-repeat="description in ResumeCtrl.workHistory[0].description track by $index">{{::description}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="yy-info-container previous-info">
+    <div class="yy-info-container-title">
+      <h4 ng-if="ResumeCtrl.language==='en'">My previous experience ...</h4>
+      <h4 ng-if="ResumeCtrl.language==='ch'">我之前的工作经验 ...</h4>
+    </div>
+    <hr class="title-separator-bold"/>
+
+    <div ng-repeat="work in ResumeCtrl.workHistory | sliceFilter:1">
+      <div class="row">
+        <div class="col-md-2 col-sm-2">
+          <a href="{{::work.companyUrl}}">
+            <img class="work-logo-thumb" ng-src="{{::work.companyLogo}}" alt="{{::work.company}}" data-yy-qtip
+                 data-qtip-content="<a href='{{::work.companyUrl}}' target='_blank'>{{::work.company}}</a>"
+                 data-qtip-class="work-info-qtip qtip-tipsy"/>
+          </a>
+        </div>
+        <div class="col-md-10 col-sm-10">
+          <h5><strong>{{::work.title}}</strong> ( {{::work.startYear}} - {{::work.endYear}} )</h5>
+
+          <ul>
+            <li ng-repeat="description in work.description track by $index">{{::description}}</li>
+          </ul>
+        </div>
+      </div>
+      <hr/>
+
+    </div>
+
+  </div>
+</div>

@@ -19,6 +19,9 @@ angular.module('yyPageApp')
           },
           PromisedEducationHistoryCH: function (dataService) {
             return dataService.getData('assets/data/education_history_ch.json');
+          },
+          PromisedCombinedHistoryEN: function (dataService) {
+            return dataService.getData('assets/data/combined_history_en.json');
           }
         }
       });
