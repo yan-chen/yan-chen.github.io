@@ -1,5 +1,20 @@
 [
   {
+    "title": "Business Information Systems",
+    "level": "Master of Science (M.S.)",
+    "company": "University of Utah",
+    "companyUrl": "http://www.utah.edu/",
+    "companyLogo": "assets/images/logos/logo_uu.png",
+    "location": "Salt Lake City, Utah",
+    "startYear": "2015",
+    "endMonth": "",
+    "endYear": "Current",
+    "description": [
+      "Data mining & data warehouse",
+      "Data analysis & data visualization"
+    ]
+  },
+  {
     "title": "Front End Web Developer",
     "company": "USANA Health Sciences",
     "companyUrl": "http://www.usana.com/",
@@ -41,6 +56,22 @@
     "description": [
       "Assisted with UI development for an internal agent application using HTML, CSS, AngularJS, Bootstrap, Git and other related technology stacks;",
       "Used Chrome DevTools to test performance of UI component created, and to debug errors;"
+    ]
+  },
+  {
+    "title": "Business Information Systems",
+    "level": "Bachelors' of Science (B.S.)",
+    "company": "University of Utah",
+    "companyUrl": "http://www.utah.edu/",
+    "companyLogo": "assets/images/logos/logo_uu.png",
+    "location": "Salt Lake City, Utah",
+    "startYear": "2010",
+    "endMonth": "May",
+    "endYear": "2013",
+    "description": [
+      "Business communication & management",
+      "Database management",
+      "Web application"
     ]
   },
   {
