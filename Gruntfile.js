@@ -345,6 +345,8 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/{,*/}*.*',
+            'bower_components/bootstrap-css-only/{,*/}*.*',
+            'bower_components/font-awesome/{,*/}*.*',
             'assets/examples/{,*/}*.*',
             'assets/data/{,*/}*.*',
             'assets/images/{,*/}*.{webp}',
@@ -378,21 +380,6 @@ module.exports = function (grunt) {
             'package.json',
             'server/**/*'
           ]
-        },{
-//for bootstrap fonts
-          expand: true,
-          dot: true,
-          cwd: 'bower_components/bootstrap-css-only',
-          src: ['fonts/*.*'],
-          dest: '<%= config.dist %>'
-        }, {
-
-//for font-awesome
-          expand: true,
-          dot: true,
-          cwd: 'bower_components/font-awesome',
-          src: ['fonts/*.*'],
-          dest: '<%= config.dist %>'
         }]
       },
       styles: {
