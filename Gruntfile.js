@@ -62,10 +62,10 @@ module.exports = function (grunt) {
         ],
         tasks: ['injector:scripts']
       },
-      //injectCss: {
-      //  files: ['<%= yeoman.client %>/{app,components}/**/*.css'],
-      //  tasks: ['injector:css']
-      //},
+      injectCss: {
+        files: ['<%= yeoman.client %>/{app,components}/**/*.css'],
+        tasks: ['injector:css']
+      },
       mochaTest: {
         files: ['server/**/*.{spec,integration}.js'],
         tasks: ['env:test', 'mochaTest']
@@ -74,7 +74,7 @@ module.exports = function (grunt) {
         files: ['<%= yeoman.client %>/{app,components}/**/*.{spec,mock}.js'],
         tasks: ['newer:jshint:all', 'wiredep:test', 'karma']
       },
-      injectimage: {
+      injectStylus: {
         files: ['<%= yeoman.client %>/{app,components}/**/*.styl'],
         tasks: ['injector:stylus']
       },
@@ -220,12 +220,13 @@ module.exports = function (grunt) {
           /bootstrap.js/,
           '/json3/',
           '/es5-shim/',
-          /font-awesome\.css/
+          /font-awesome\.css/,
+          /bootstrap\.css/
         ]
       },
       client: {
         src: '<%= yeoman.client %>/index.html',
-        ignorePath: '<%= yeoman.client %>/',
+        ignorePath: '<%= yeoman.client %>/'
       },
       test: {
         src: './karma.conf.js',
@@ -238,8 +239,8 @@ module.exports = function (grunt) {
       dist: {
         src: [
           '<%= yeoman.dist %>/client/!(bower_components){,*/}*.{js,css}',
-          '<%= yeoman.dist %>/client/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          '<%= yeoman.dist %>/client/assets/fonts/*'
+          //'<%= yeoman.dist %>/client/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          //'<%= yeoman.dist %>/client/assets/fonts/*'
         ]
       }
     },
@@ -258,19 +259,19 @@ module.exports = function (grunt) {
     usemin: {
       html: ['<%= yeoman.dist %>/client/!(bower_components){,*/}*.html'],
       css: ['<%= yeoman.dist %>/client/!(bower_components){,*/}*.css'],
-      js: ['<%= yeoman.dist %>/client/!(bower_components){,*/}*.js'],
-      options: {
-        assetsDirs: [
-          '<%= yeoman.dist %>/client',
-          '<%= yeoman.dist %>/client/assets/images'
-        ],
-        //This is so we update image references in our ng-templates
-        patterns: {
-          js: [
-            [/(assets\/images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
-          ]
-        }
-      }
+      js: ['<%= yeoman.dist %>/client/!(bower_components){,*/}*.js']
+      //options: {
+      //  assetsDirs: [
+      //    '<%= yeoman.dist %>/client',
+      //    '<%= yeoman.dist %>/client/assets/images'
+      //  ],
+      //  //This is so we update image references in our ng-templates
+      //  patterns: {
+      //    js: [
+      //      [/(assets\/images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
+      //    ]
+      //  }
+      //}
     },
 
     // The following *-min tasks produce minified files in the dist folder
@@ -345,42 +346,46 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/{,*/}*.*',
-            'bower_components/bootstrap-css-only/{,*/}*.*',
-            'bower_components/font-awesome/{,*/}*.*',
+            //'bower_components/bootstrap-css-only/{,*/}*.*',
+            //'assets/fonts/font-awesome/{,*/}*.*',
+            //'assets/fonts/{,*/}*/{,*/}*.*',
             'assets/examples/{,*/}*.*',
             'assets/data/{,*/}*.*',
-            'assets/images/{,*/}*.{webp}',
-            'assets/fonts/{,*/}*.*',
+            //'assets/images/{,*/}*.{webp}',
             'index.html'
           ]
         }, {
           expand: true,
-          cwd: '.tmp/images',
-          dest: '<%= yeoman.dist %>/client/assets/images',
-          src: ['generated/{,*/}*.*']
+          cwd: '<%= yeoman.client %>',
+          src: 'assets/images/{,*/}*.*',
+          dest: '<%= yeoman.dist %>/client'
         }, {
           expand: true,
-          cwd: '.tmp/data',
-          dest: '<%= yeoman.dist %>/client/assets/data',
-          src: ['generated/{,*/}*.*']
-        }, {
+          flatten: true,
+          cwd: '<%= yeoman.client %>',
+          src: 'bower_components/bootstrap-css-only/fonts/*',
+          dest: '<%= yeoman.dist %>/client/fonts'
+        },{
           expand: true,
-          cwd: '.tmp/fonts',
-          dest: '<%= yeoman.dist %>/client/assets/fonts',
-          src: ['generated/{,*/}*.*']
-        }, {
+          flatten: true,
+          cwd: '<%= yeoman.client %>',
+          src: 'assets/fonts/lato/fonts/*',
+          dest: '<%= yeoman.dist %>/client/fonts'
+        },{
           expand: true,
-          cwd: '.tmp/examples',
-          dest: '<%= yeoman.dist %>/client/assets/examples',
-          src: ['generated/{,*/}*.*']
-        }, {
-          expand: true,
-          dest: '<%= yeoman.dist %>',
-          src: [
-            'package.json',
-            'server/**/*'
-          ]
-        }]
+          flatten: true,
+          cwd: '<%= yeoman.client %>',
+          src: 'assets/fonts/font-awesome/fonts/*',
+          dest: '<%= yeoman.dist %>/client/fonts'
+        },
+          {
+            expand: true,
+            dest: '<%= yeoman.dist %>',
+            src: [
+              'package.json',
+              'server/**/*'
+            ]
+          }]
       },
       styles: {
         expand: true,
@@ -415,10 +420,10 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'stylus',
+        'stylus'
       ],
       test: [
-        'stylus',
+        'stylus'
       ],
       debug: {
         tasks: [
