@@ -346,20 +346,22 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/{,*/}*.*',
-            //'bower_components/bootstrap-css-only/{,*/}*.*',
-            //'assets/fonts/font-awesome/{,*/}*.*',
-            //'assets/fonts/{,*/}*/{,*/}*.*',
+            'bower_components/bootstrap-css-only/{,*/}*.*',
+            'assets/fonts/font-awesome/{,*/}*.*',
+            'assets/fonts/{,*/}*/{,*/}*.*',
             'assets/examples/{,*/}*.*',
             'assets/data/{,*/}*.*',
-            //'assets/images/{,*/}*.{webp}',
+            'assets/images/{,*/}*.{webp}',
             'index.html'
           ]
-        }, {
-          expand: true,
-          cwd: '<%= yeoman.client %>',
-          src: 'assets/images/{,*/}*.*',
-          dest: '<%= yeoman.dist %>/client'
-        }, {
+        },
+        //  {
+        //  expand: true,
+        //  cwd: '<%= yeoman.client %>',
+        //  src: 'assets/images/{,*/}*.*',
+        //  dest: '<%= yeoman.dist %>/client'
+        //},
+          {
           expand: true,
           flatten: true,
           cwd: '<%= yeoman.client %>',
