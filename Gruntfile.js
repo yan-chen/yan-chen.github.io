@@ -347,7 +347,7 @@ module.exports = function (grunt) {
             '.htaccess',
             'bower_components/{,*/}*.*',
             'bower_components/bootstrap-css-only/{,*/}*.*',
-            'assets/fonts/font-awesome/{,*/}*.*',
+            'bower_components/font-awesome/{,*/}*.*',
             'assets/fonts/{,*/}*/{,*/}*.*',
             'assets/examples/{,*/}*.*',
             'assets/data/{,*/}*.*',
@@ -377,7 +377,7 @@ module.exports = function (grunt) {
           expand: true,
           flatten: true,
           cwd: '<%= yeoman.client %>',
-          src: 'assets/fonts/font-awesome/fonts/*',
+          src: 'bower_components/font-awesome/fonts/*',
           dest: '<%= yeoman.dist %>/client/fonts'
         },
           {
