@@ -6,6 +6,7 @@ angular
     'ngResource',
     'ngSanitize',
     'ui.router',
+    'ui.bootstrap',
     'akoenig.deckgrid'
   ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {

@@ -15,7 +15,7 @@
           <h5 ng-if="gallery.location===null">Location Unspecified</h5>
           <!--https://instagram.com/explore/tags/-->
           <p>
-            <i class="fa fa-heart-o text-red"></i> {{gallery.likes.count}} {{parseInt(gallery.created_time)}}
+            <i class="glyphicon glyphicon-heart-empty text-red"></i> {{gallery.likes.count}} {{parseInt(gallery.created_time)}}
             <span class="float-right gallery-date">{{gallery.created_time*1000| date:'MMM dd, yyyy'}}</span>
           </p>
           <hr/>

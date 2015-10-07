@@ -5,91 +5,84 @@ angular.module('yyPageApp')
 
     $scope.examples = [
       {
-        'fileName': 'Product Detail',
-        'filePath': 'assets/examples/product-detail.png'
+        'demoName': 'Product Detail',
+        'demoThumbPath': 'assets/examples/product-detail.png'
       },
 
       {
-        'fileName': 'Application',
-        'filePath': 'assets/examples/app.png'
+        'demoName': 'Application',
+        'demoThumbPath': 'assets/examples/app.png'
       },
       {
-        'fileName': 'Profile for Mobile',
-        'filePath': 'assets/examples/profile-mobile.png'
+        'demoName': 'Profile for Mobile',
+        'demoThumbPath': 'assets/examples/profile-mobile.png'
       }, {
-        'fileName': 'Checkout Page',
-        'filePath': 'assets/examples/checkout.png'
+        'demoName': 'Checkout Page',
+        'demoThumbPath': 'assets/examples/checkout.png'
       },
       {
-        'fileName': 'Profile',
-        'filePath': 'assets/examples/profile.png'
+        'demoName': 'Profile',
+        'demoThumbPath': 'assets/examples/profile.png'
       },
       {
-        'fileName': 'Side Menu on Mobile',
-        'filePath': 'assets/examples/side-menu-on-mobile.png'
+        'demoName': 'Side Menu on Mobile',
+        'demoThumbPath': 'assets/examples/side-menu-on-mobile.png'
       },
       {
-        'fileName': 'Shopping Cart',
-        'filePath': 'assets/examples/shopping-cart.png'
+        'demoName': 'Shopping Cart',
+        'demoThumbPath': 'assets/examples/shopping-cart.png'
       },
 
       {
-        'fileName': 'Page with Dashboard',
-        'filePath': 'assets/examples/sub-page-with-dashboard.png'
+        'demoName': 'Page with Dashboard',
+        'demoThumbPath': 'assets/examples/sub-page-with-dashboard.png'
       }
     ];
 
     $scope.wireframeFiles = [
       {
-        'fileName': 'yyPage Version #1',
-        'fileType': 'pdf',
-        'filePath': 'data/yy_page_v1.pdf',
-        'fileThumbPath': 'data/yy_page_v1_thumb.png'
+        'demoName': 'yyPage Version #1',
+        'demoType': 'pdf',
+        'demoPath': 'assets/examples/yy_page_v1.pdf',
+        'demoThumbPath': 'data/yy_page_v1_thumb.png'
       },
       {
-        'fileName': 'yyPage Version #2',
-        'fileType': 'pdf',
-        'filePath': 'data/yy_page_v2.pdf',
-        'fileThumbPath': 'data/yy_page_v2_thumb.png'
+        'demoName': 'yyPage Version #2',
+        'demoType': 'pdf',
+        'demoPath': 'assets/examples/yy_page_v2.pdf',
+        'demoThumbPath': 'data/yy_page_v2_thumb.png'
       },
       {
-        'fileName': 'Community Blog',
-        'fileType': 'pdf',
-        'filePath': 'data/yy_community_blog.pdf',
-        'fileThumbPath': 'data/yy_community_blog_thumb.png'
+        'demoName': 'Community Blog',
+        'demoType': 'pdf',
+        'demoPath': 'assets/examples/yy_community_blog.pdf',
+        'demoThumbPath': 'data/yy_community_blog_thumb.png'
       },
       {
-        'fileName': 'Widget Bank Design',
-        'fileType': 'video',
-        'filePath': 'http://www.youtube.com/v/IAKFhjwcE_Q?rel=0',
-        'fileThumbPath': 'data/usana_widgetbank_thumb.png'
+        'demoName': 'Widget Bank Design',
+        'demoType': 'video',
+        'demoPath': 'http://www.youtube.com/v/IAKFhjwcE_Q?rel=0',
+        'demoThumbPath': 'data/usana_widgetbank_thumb.png'
       }
     ];
-    $scope.setCurrentFile = function (file) {
-      $scope.currentFile = file;
-    };
 
     $scope.webComponentDemos = [
       {
         'demoName': 'AngularJS To Do List',
-        'demoPath': 'views/portfolio/portfolio.todo.tpl.html',
-        'demoThumbPath': 'data/yy_portfolio_todo_thumb.png'
+        'demoPath': '<div data-example-todo></div>',
+        'demoThumbPath': 'assets/examples/yy_portfolio_todo_thumb.png'
       },
       {
         'demoName': 'Sample Widgets',
-        'demoPath': 'views/portfolio/portfolio.widget.tpl.html',
-        'demoThumbPath': 'data/yy_portfolio_widget_thumb.png'
+        'demoPath': '<div data-example-widget></div>',
+        'demoThumbPath': 'assets/examples/yy_portfolio_widget_thumb.png'
       },
       {
         'demoName': 'D3 Chart (coming ...)',
-        'demoPath': 'views/portfolio/portfolio.d3.tpl.html',
+        'demoPath': '',
         'demoThumbPath': ''
       }
-
     ];
-    $scope.setCurrentDemo = function (demo) {
-      $scope.currentDemo = demo;
-    };
 
 
   });
