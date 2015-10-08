@@ -65,12 +65,12 @@
 
   <div class="yy-toolbar clearfix">
     <!--<div class="tool-icon float-left" ng-click="GalleryCtrl.reverseOrder=null"-->
-         <!--ng-class="{'active':GalleryCtrl.reverseOrder===null}">-->
-      <!--<i class="fa fa-calendar-plus-o"></i>-->
+    <!--ng-class="{'active':GalleryCtrl.reverseOrder===null}">-->
+    <!--<i class="fa fa-calendar-plus-o"></i>-->
     <!--</div>-->
     <!--<div class="tool-icon float-left" ng-click="GalleryCtrl.reverseOrder='-'"-->
-         <!--ng-class="{'active':GalleryCtrl.reverseOrder==='-'}">-->
-      <!--<i class="fa fa-calendar-minus-o"></i>-->
+    <!--ng-class="{'active':GalleryCtrl.reverseOrder==='-'}">-->
+    <!--<i class="fa fa-calendar-minus-o"></i>-->
     <!--</div>-->
 
     <div class="tool-icon float-right" ng-click="GalleryCtrl.isGridView=false"
@@ -83,12 +83,17 @@
     </div>
   </div>
 
-
   <div ng-if="GalleryCtrl.isGridView" instagram-gallery-template="" data-galleries="GalleryCtrl.currentMedia"
-       data-is-reverse="GalleryCtrl.reverseOrder" data-limit-num="GalleryCtrl.limitNum" data-order-var="GalleryCtrl.orderVar"></div>
-  <div ng-if="!GalleryCtrl.isGridView" instagram-gallery-template-list="" data-galleries="GalleryCtrl.currentMedia"
-       data-is-reverse="GalleryCtrl.reverseOrder" data-limit-num="GalleryCtrl.limitNum" data-order-var="GalleryCtrl.orderVar"></div>
+       data-is-reverse="GalleryCtrl.reverseOrder" data-limit-num="GalleryCtrl.limitNum"
+       data-order-var="GalleryCtrl.orderVar">
+  </div>
+  <div class="padding-15-lr">
+    <div ng-if="!GalleryCtrl.isGridView" instagram-gallery-template-list="" data-galleries="GalleryCtrl.currentMedia"
+         data-is-reverse="GalleryCtrl.reverseOrder" data-limit-num="GalleryCtrl.limitNum"
+         data-order-var="GalleryCtrl.orderVar">
+    </div>
 
+  </div>
   <div class="clearfix text-center gallery-loadmore" ng-if="GalleryCtrl.nextUrl">
     <button class="btn btn-primary-transparent" ng-click="GalleryCtrl.loadMore()">Load More
       &nbsp; &nbsp;<i class="glyphicon glyphicon-chevron-down text-1x"></i></button>

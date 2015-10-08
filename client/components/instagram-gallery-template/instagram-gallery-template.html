@@ -17,7 +17,8 @@
   <div class="gallery-thumb-container" ng-click="templateCtrl.openModal(gallery,$index)">
     <img src="{{gallery.images.thumbnail.url}}" class="full-width"/>
   </div>
-  <div class="gallery-thumb-caption">{{gallery.location.name}}&nbsp;<br/>
+  <div class="gallery-thumb-caption">
+    <span class="hidden-xs">{{gallery.location.name}}&nbsp;</span><br/>
 
     <p><i class="glyphicon glyphicon-heart-empty text-red"></i> {{gallery.likes.count}}</p></div>
 

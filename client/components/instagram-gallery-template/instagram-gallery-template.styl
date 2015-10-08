@@ -32,10 +32,13 @@
   max-width 120rem
   margin 0 auto
   max-height 90%
-  margin-top 2rem
+  margin-top 1rem
   font-size $text-2x
   color gray
-
+  @media screen and (max-width: 767px)
+    width 98%
+    margin-top 0
+    font-size $text-3x
 
 .gallery-modal .modal-dialog
   width 100%
@@ -58,20 +61,31 @@
   font-size 4.5rem
   color #fff
   margin-bottom 2rem
+  padding 1rem
+  @media screen and (max-width: 767px)
+    font-size 3.5rem
 
 .gallery-modal .modal-content .modal-body
   overflow auto
   max-width 100%
   border none
   position fixed
-  top 9rem
+  top 10rem
   bottom 0
+  @media screen and (max-width: 767px)
+    top 8rem
 
 .gallery-modal .modal-content .modal-body  .gallery-list-row-container
   background #fff
 
 .gallery-modal .modal-content .modal-body img
   width 100%
+
+.gallery-modal .modal-content .modal-body .gallery-list-caption .gallery-image-caption,
+.gallery-modal .modal-content .modal-body .gallery-image-comment
+  @media screen and (max-width: 767px)
+    font-size $text-4x
+
 
 .gallery-modal .modal-content .modal-body .gallery-image-comment img
   width 2rem
