@@ -1,4 +1,4 @@
-.aside.yy-navbar-aside
+.yy-navbar-aside
   min-width 15rem !important
   width 15rem
   position fixed
@@ -10,23 +10,28 @@
   font-size 1.8rem
   padding 1rem
 
-.aside.yy-navbar-aside:focus
+.yy-navbar-aside:focus
   outline none
 
-.aside.yy-navbar-aside .nav > li
+.yy-navbar-aside .nav > li
   padding 0.5rem
 
-.aside.yy-navbar-aside .nav > li.active
-  background #5a5a5a
-  colore #fff
 
-.aside.yy-navbar-aside .nav > li > a
+.yy-navbar-aside .nav > li.hover
+  background #5a5a5a
+  color #fff
+
+.yy-navbar-aside .nav > li > a
   padding 0.6rem 1rem
   cursor pointer
 
-.aside.yy-navbar-aside .nav > li.active a
+.yy-navbar-aside .nav > li.active a
   color #fff
+  background #5a5a5a
 
+.yy-navbar-aside .nav > li:hover a
+  background #5a5a5a
+  color #fff
 
 .animate-if.ng-enter
   -webkit-transition 0.5s linear all

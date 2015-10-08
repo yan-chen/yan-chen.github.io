@@ -20,9 +20,9 @@ function modalService($modal) {
 
   //------------------------------------
 
-  function openModal(data, modalClass,backdropClass) {
+  function openModal(url,data,index, modalClass,backdropClass) {
     var modalInstance = $modal.open({
-      templateUrl: 'components/portfolio-widget/modal-template.html',
+      templateUrl: url,
       controller: ModalInstanceCtrl,
       controllerAs: 'ModalCtrl',
       backdrop: true,
@@ -31,14 +31,15 @@ function modalService($modal) {
       resolve: {
         data: function () {
           return data;
-        }
+        },
+        index:index
       }
     });
   }
 
-  function ModalInstanceCtrl($modalInstance, data) {
+  function ModalInstanceCtrl($modalInstance, data,index) {
     this.data = data;
-
+    this.index=index;
     this.ok = function () {
       $modalInstance.close();
     };

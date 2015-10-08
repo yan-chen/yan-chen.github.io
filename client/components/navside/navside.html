@@ -1,15 +1,11 @@
 <div ng-if="NavCtrl.isAsideVisible" class="animate-if">
-  <div class="aside yy-navbar-aside" tabindex="-1" role="dialog">
-    <div class="aside-dialog">
-      <div class="aside-content">
-        <div class="aside-body" collapse="NavCtrl.isAsideVisible">
-          <ul class="nav nav-list nav-stacked">
-            <li ng-repeat="item in NavCtrl.menu" ui-sref-active="active" ng-click="NavCtrl.toggleAsideNav()">
-              <a ui-sref="{{item.state}}"><i class="{{item.icon}}"></i> {{item.title}}</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <div class="yy-navbar-aside" tabindex="-1" role="dialog">
+    <div collapse="!NavCtrl.isAsideVisible">
+      <ul class="nav nav-list nav-stacked">
+        <li ng-repeat="item in NavCtrl.menu" ui-sref-active="active" ng-click="NavCtrl.toggleAsideNav()">
+          <a ui-sref="{{item.state}}"><i class="{{item.icon}}"></i> {{item.title}}</a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

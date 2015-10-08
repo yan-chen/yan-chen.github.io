@@ -44,10 +44,7 @@
 
 .yy-container.gallery-container .user-search-container  .title
   color #757575
-  font-size $text-4x
-  @media only screen and (max-width 432px)
-    font-size $text-3x
-
+  font-size $text-3x
 
 
 .yy-container.gallery-container .user-search-container .search-box
@@ -55,16 +52,44 @@
 .yy-container.gallery-container .user-search-container .search-box input
   border-radius 2rem
 
-.yy-container.gallery-container .user-search-container .search-box i
+.yy-container.gallery-container .user-search-container .search-box .btn-search
   position absolute
-  right 0rem
+  right 0
   z-index 2
-  top 1rem
+  top 18%
   padding 0 2rem
   cursor pointer
+  background transparent
+  color $yy-orange-heavy
+
+.yy-container.gallery-container .user-search-container .search-box .btn-search.btn[disabled]
+  color #a9a9a9
+
+.yy-container.gallery-container .user-search-container .search-box .btn-search:focus
+  outline none
+  box-shadow none
 
 
+.yy-container.gallery-container .user-search-container .search-box .dropdown-menu
+  padding 1rem
+  border-bottom-left-radius 2rem
+  border-bottom-right-radius 2rem
 
+.yy-container.gallery-container .user-search-container .search-box .dropdown-menu li a
+  color gray
+
+.yy-container.gallery-container .user-search-container .search-box .dropdown-menu li a img
+  width 3rem
+  margin-right 1rem
+
+.yy-container.gallery-container .user-search-container .search-box .dropdown-menu li.active a
+  background $yy-orange-pale
+  color white
+
+.yy-container.gallery-container .gallery-loadmore .btn
+  margin 5rem 0 8rem
+  padding 1rem 10rem
+  font-size $text-5x
 
 
 /*----------  instagram badge --------------*/
@@ -87,3 +112,5 @@
   @media only screen and (-webkit-min-device-pixel-ratio 2), only screen and (min--moz-device-pixel-ratio 2), only screen and (-o-min-device-pixel-ratio 2 / 1), only screen and (min-device-pixel-ratio 2), only screen and (min-resolution 192dpi), only screen and (min-resolution 2dppx)
     background-image url(//badges.instagram.com/static/images/ig-badge-sprite-32@2x.png)
     background-size 60px 178px
+
+

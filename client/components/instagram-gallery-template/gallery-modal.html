@@ -1,0 +1,42 @@
+<div class="modal-header">
+  <span class="modal-close float-right" ng-click="ModalCtrl.cancel()">X</span>
+
+</div>
+<div class="modal-body">
+  <div class="col-lg-12 gallery-list-row-container">
+    <div class="gallery-list-row">
+      <div class="row">
+        <div class="col-lg-7 col-md-7 col-sm-7 com-xs-12">
+          <a href="{{ModalCtrl.data.link}}" target="_blank" data-toggle="tooltip" data-placement="right"
+             title="{{ModalCtrl.data.images.standard_resolution.url}}">
+            <img src="{{ModalCtrl.data.images.standard_resolution.url}}" class="full-width"/>
+          </a>
+        </div>
+        <div class="gallery-list-caption col-lg-5 col-md-5 col-sm-5 com-xs-12">
+          <span class="float-right gallery-index">#{{ModalCtrl.index+1}}</span>
+          <h4><a href="https://instagram.com/explore/locations/{{ModalCtrl.data.location.id}}/">{{ModalCtrl.data.location.name}}</a>
+          </h4>
+          <h5 ng-if="ModalCtrl.data.location===null">Location Unspecified</h5>
+          <!--https://instagram.com/explore/tags/-->
+          <p>
+            <i class="glyphicon glyphicon-heart-empty text-red"></i> {{ModalCtrl.data.likes.count}} &nbsp;
+            <i class="fa fa-comment-o text-black"></i> {{ModalCtrl.data.comments.count}}
+            <span class="float-right text-1x"> {{ModalCtrl.data.created_time*1000| date:'MMM dd, yyyy'}}</span>
+          </p>
+          <hr/>
+          <p class="gallery-image-caption">{{ModalCtrl.data.caption.text}}</p>
+
+          <div ng-repeat="comment in ModalCtrl.data.comments.data track by $index">
+            <div class="gallery-image-comment">
+              <a href="https://instagram.com/{{comment.from.username}}">
+                <img src="{{comment.from.profile_picture}}" class="img-circle"/>
+                <strong>{{comment.from.username}}</strong></a>
+              &nbsp;&nbsp;&nbsp;{{comment.text}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

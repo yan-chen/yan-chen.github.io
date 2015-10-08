@@ -10,7 +10,7 @@ angular.module('yyPageApp')
         controllerAs:'GalleryCtrl',
         resolve:{
           myInstagramGalleries:function(InstagramApiServices){
-            return InstagramApiServices.getMyMedia();
+            return InstagramApiServices.getMyMedia20();
           },
           myInstagramAccount:function(InstagramApiServices){
             return InstagramApiServices.getUser(2180465817);

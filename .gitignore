@@ -5,3 +5,4 @@ public
 client/bower_components
 /server/config/local.env.js
 npm-debug.log
+client/app/instagram-api-services/instagram-api-services.service.js
