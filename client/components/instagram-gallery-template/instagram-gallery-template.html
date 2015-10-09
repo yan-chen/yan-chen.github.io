@@ -20,8 +20,10 @@
   <div class="gallery-thumb-caption">
     <span class="hidden-xs">{{gallery.location.name}}&nbsp;</span><br/>
 
-    <p><i class="glyphicon glyphicon-heart-empty text-red"></i> {{gallery.likes.count}}</p></div>
-
+    <p><i class="glyphicon glyphicon-heart-empty text-red"></i>
+      {{gallery.likes.count}}
+      <span class="float-right gallery-index">#{{$index+1}}</span>
+    </p></div>
 </div>
 <!--<div ng-if="viewDetails" class="clearfix" style="border:solid red 2px; height:30rem;">-->
 <!--<img src="{{gallery.images.standard_resolution.url}}" class="full-width"/>-->

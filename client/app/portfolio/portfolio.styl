@@ -1,238 +1,57 @@
-
-
-/*.yy-container.portfolio-container*/
-
-/*-----------*/
-
-.widget-wrapper
-  width 300px
-  height 241px
-  margin-bottom 20px
-
-
-.widget-wrapper.panel
-  height 300px
-  margin-bottom 20px
-
-
-.ao-widget,
-.pp-widget
-  height 100%
-
-
-.widget-color-theme-option
-  width 30px
-  height 30px
-  border-radius 5px
-
-
 /*-----------------------*/
 
 .portfolio-container .portfolio-greeting
-  padding-top 3rem
+  padding-top 5rem
   padding-left 35%
-  margin-bottom 10rem
+  margin-bottom 2rem
+  color $yy-orange-heavy
+  line-height 2.2rem
 
 
-/*.portfolio-container .portfolio-widget-container-row:before*/
-  /*content "Coding Examples"*/
-  /*width 16rem*/
-  /*height 5rem*/
-  /*position absolute*/
-  /*top 0*/
-  /*background #66b9d2*/
-  /*padding 1rem*/
-  /*font-weight 900*/
-  /*color #fff*/
-  /*text-align center*/
-  /*transform rotate(-3deg)*/
-
-.portfolio-container .portfolio-widget-container
-  padding 20px
-
-
-
-
-.portfolio-container .portfolio-panel
-  min-width 262px
-
-.portfolio-container .portfolio-widget
-  height 205px
-  min-width 260px
-  overflow hidden
-  background-size 100% auto
-  text-align center
-  background-size cover
-
-
-.portfolio-container .portfolio-widget .portfolio-widget-overlay
-  background-color rgba(0, 0, 0, 0.10)
-  padding-top 60px
-  width 100%
-  height 100%
-
-.portfolio-container .portfolio-widget .portfolio-widget-overlay:hover
-  background-color rgba(0, 0, 0, .6)
-
-
-.portfolio-container .portfolio-widget .btn.portfolio-widget-overlay-btn
-  background-color transparent
-  bordernone
-  colortransparent
-  -webkit-transition all linear 0.25s
-  -moz-transition all linear 0.25s
-  -ms-transition all linear 0.25s
-  -o-transition all linear 0.25s
-  transition all linear 0.25s
-  -webkit-transform rotateY(90deg)
-  -moz-transform rotateY(90deg)
-  -ms-transform rotateY(90deg)
-  -o-transform rotateY(90deg)
-  transform rotateY(90deg)
-  padding 15px 25px
-
-
-.portfolio-container .portfolio-widget .portfolio-widget-overlay:hover .btn.portfolio-widget-overlay-btn
-  bordersolid #fff 3px
-  color #fff
-  padding 15px 40px
-  font-size 20px
-  -webkit-transform rotateY(0deg)
-  -moz-transform rotateY(0deg)
-  -ms-transform rotateY(0deg)
-  -o-transform rotateY(0deg)
-  transform rotateY(0deg)
-
-.portfolio-container .portfolio-widget .portfolio-widget-overlay-touch-device
-  background-color rgba(0, 0, 0, 0.50)
-  padding-top 60px
-  width 100%
-  height 100%
-
-.portfolio-container .portfolio-widget .portfolio-widget-overlay-touch-device .btn.portfolio-widget-overlay-btn
-  bordersolid #fff 3px
-  color #fff
-  padding15px 40px
-  font-size 20px
-  -webkit-transform rotateY(0deg)
-  -moz-transform rotateY(0deg)
-  -ms-transform rotateY(0deg)
-  -o-transform rotateY(0deg)
-  transform rotateY(0deg)
-
-
-
-/**** for portfolio page modal****/
-#portfolio-filePreviewModal .file-preview-modal.modal-dialog
-  width 85%
-  min-width 300px
-  max-width 1000px
-
-
-#portfolio-filePreviewModal .file-preview-modal .modal-body
-  height 70%
-  background-color rgb(206, 206, 206)
-
-
-#portfolio-filePreviewModal .file-preview-modal .modal-body iframe
-  border none
-
-
-/**** for portfolio demo modal ****/
-#portfolio-demoPreviewModal .demo-preview-modal.modal-dialog
-  width 85%
-  min-width 300px
-  max-width 1000px
-
-
-#portfolio-demoPreviewModal .demo-preview-modal .modal-body
-  max-height 90%
-  overflow-x hidden
-  overflow-y auto
-
-#portfolio-demoPreviewModal .demo-preview-modal .modal-body-inner
-  height 100%
-  width 100%
-  overflow-y auto
-  overflow-x hidden
-
-
-/**** portfolio project modal ****/
-
-#portfolio-projectPreviewModal .project-preview-modal.modal-dialog
-  width 600px
-  height 500px
-
-#portfolio-projectPreviewModal .project-preview-modal .modal-body
-  width 600px
-  height 500px
-
-
-#portfolio-projectPreviewModal .project-preview-modal .modal-body .iframe-wrapper
+.portfolio-container .section-title
+  font-size $text-3x
+  font-weight bold
+  padding 0.8rem 3rem
+  background-color $yy-orange-pale-light
   position relative
-  padding-bottom 56.25%
-  padding-top 30px
-  height 0
-  overflow hidden
+  width 100%
+  min-width 25rem
+  margin 3rem 1rem 1remx -2rem
+  color #555
+  text-shadow 0px 1px 1px #fff
+  -webkit-box-shadow 0px 1px 4px #888
+  -moz-box-shadow 0px 1px 4px #888
+  box-shadow 0px 1px 4px #888
 
-
-iframe.yy-video-dir-iframe
+.portfolio-container .section-title:before
+  content ' '
   position absolute
-  top 0
+  width 4rem
+  height 0
+  left -2rem
+  top 1.3rem
+  border-width 2rem 1rem
+  border-style solid
+  border-color $yy-orange-pale-light $yy-orange-pale-light  $yy-orange-pale-light transparent
+
+.portfolio-container .section-title:after
+  content ' '
+  position absolute
+  width 0
+  height 0
   left 0
-  height 100%
-  width 100%
+  top 100%
+  border-width .7rem 1rem
+  border-style solid
+  border-color $yy-orange-pale $yy-orange-pale transparent transparent
 
 
-/**** portfolio-todo.tpl.html ****/
-
-#portfolio-todo-panel .todo-tabset li.todo-tabfirst-child
-  margin-left 10px
-
-#portfolio-todo-panel .todo-list
-  list-style none
-  padding 0
-  height 305px
-  width 100%
-  overflow-x hidden
-  overflow-y auto
-
-#portfolio-todo-panel .todo-list.archived-list
-  height 400px
-
-#portfolio-todo-panel .todo-list li
-  line-height 40px
-  font-size  20px
-
-#portfolio-todo-panel .todo-list .todo-checkbox
-  font-size  40px
-  margin-right 10px
-
-#portfolio-todo-panel .todo-list .strike-text
-  color #d4d4d4
-
-#portfolio-todo-panel .todo-tab-content
-  padding 20px
-
-
-
-
-@media (max-width 340px)
-  .portfolio-container .portfolio-widget-container
-    padding 10px
-
-  #portfolio-demoPreviewModal .demo-preview-modal .modal-body
-    padding 10px 0
-
-  /**** for portfolio demo modal ****/
-  #portfolio-demoPreviewModal .demo-preview-modal .modal-body
-    height 300px
-
-  #portfolio-todo-panel .todo-list
-    height 130px
-
-  #portfolio-todo-panel .todo-list li
-    line-height 22px
-    font-size  14px
-
-
+.portfolio-container .portfolio-examples-container
+  @media screen and (max-width: 967px)
+    margin-top 4rem
+  @media screen and (min-width: 968px) and (max-width: 1299px)
+    margin-top 6rem
+  @media screen and (min-width: 1300px)and (max-width: 1399px)
+    margin-top 10rem
+  @media screen and (min-width: 1400px)
+    margin-top 12rem

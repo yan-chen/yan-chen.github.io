@@ -3,25 +3,34 @@
 angular.module('yyPageApp')
   .directive('exampleTodo', function () {
     return {
-      templateUrl: 'components/todo-example/todo-example.html',
+      templateUrl: 'components/example-todo/example-todo.html',
       restrict: 'EA',
       controller:function(localStorageService){
-        $scope.toDoTabs = [
+        var _this =this;
+
+        _this.todo = {};
+        _this.tempArchiveList = [];
+        _this.archivedList = [];
+        _this.todoList = [];
+        _this.toDoTabs = [
           {'title': 'Current List', 'content': 'todoCurrentList.tpl.html'},
           {'title': 'Archived List', 'content': 'todoArchivedList.tpl.html'}
         ];
+
+        setData();
 
         /**
          * Retrieve data from local storage if existed, if not set it to default values
          * @returns {*[]}
          */
-        var setData = function () {
+        function setData() {
 
           var toDoList, tempArchiveList;
 
           if (localStorageService.get('yyPage-portfolio-todo-example-list') !== null) {
             toDoList = localStorageService.get('yyPage-portfolio-todo-example-list');
-            tempArchiveList = function () {
+
+              var getTempArchiveList = function () {
               var tempList = [];
               angular.forEach(toDoList, function (todo) {
                 if (todo.isDone) {
@@ -30,6 +39,7 @@ angular.module('yyPageApp')
               });
               return tempList;
             };
+            tempArchiveList =getTempArchiveList();
           } else {
             toDoList = [
               {'description': 'Need to call ...', 'isDone': false},
@@ -37,87 +47,84 @@ angular.module('yyPageApp')
             ];
             tempArchiveList = [];
           }
-          return [toDoList, tempArchiveList];
+
+          _this.toDoList = toDoList;
+          _this.tempArchiveList = tempArchiveList;
         };
 
-        $scope.toDoList = setData()[0];
-        $scope.tempArchiveList = setData()[1];
-
-
         if (localStorageService.get('yyPage-portfolio-archived-list') !== null) {
-          $scope.archivedList = localStorageService.get('yyPage-portfolio-archived-list');
+          _this.archivedList = localStorageService.get('yyPage-portfolio-archived-list');
         } else {
-          $scope.archivedList = [];
+          _this.archivedList = [];
         }
-
-        $scope.todo = {};
 
         /**
          * Add item todo-example into the beginning of the toDoList array
          * @param {Object} todo
          * @returns {{}}
          */
-        $scope.addToList = function (todo) {
-          $scope.toDoList.unshift(
+        _this.addToList = function (todo) {
+          _this.toDoList.unshift(
             {
               'description': todo.description,
               'isDone': false
             }
           );
-          $scope.todo = {};
+          _this.todo = {};
         };
 
-        $scope.addToTempArchiveList = function (todo) {
-          if ($scope.tempArchiveList.indexOf(todo) === -1) {
-            $scope.tempArchiveList.unshift(todo);
+        _this.addToTempArchiveList = function (todo) {
+          console.log(_this.tempArchiveList)
+          if (_this.tempArchiveList.indexOf(todo) === -1) {
+            _this.tempArchiveList.unshift(todo);
           }
           else {
-            $scope.tempArchiveList.remove(todo);
+            _this.tempArchiveList.remove(todo);
           }
         };
 
-        $scope.selectAll = function () {
-          $scope.tempArchiveList = angular.copy($scope.toDoList);
+        _this.selectAll = function () {
+          _this.tempArchiveList = angular.copy(_this.toDoList);
         };
-        $scope.unselectAll = function () {
-          $scope.tempArchiveList = [];
+        _this.unselectAll = function () {
+          _this.tempArchiveList = [];
         };
 
-        $scope.archiveTodo = function () {
+        _this.archiveTodo = function () {
           var tempToDoList = [];
-          angular.forEach($scope.toDoList, function (todo) {
+          angular.forEach(_this.toDoList, function (todo) {
             if (todo.isDone) {
-              $scope.archivedList.unshift(todo);
+              _this.archivedList.unshift(todo);
             }
             else {
               tempToDoList.unshift(todo);
             }
           });
-          $scope.toDoList = tempToDoList;
+          _this.toDoList = tempToDoList;
         };
 
-        $scope.saveToDoLocally = function () {
-          localStorageService.set('yyPage-portfolio-todo-example-list', $scope.toDoList);
-          localStorageService.set('yyPage-portfolio-archived-list', $scope.archivedList);
+        _this.saveToDoLocally = function () {
+          localStorageService.set('yyPage-portfolio-todo-example-list', _this.toDoList);
+          localStorageService.set('yyPage-portfolio-archived-list', _this.archivedList);
         };
 
-
-        $scope.clearLocalToDo = function () {
+        _this.clearLocalToDo = function () {
           localStorageService.remove('yyPage-portfolio-todo-example-list');
           localStorageService.remove('yyPage-portfolio-archived-list');
-          $scope.toDoList = [
+          _this.toDoList = [
             {'description': 'Need to call ...', 'isDone': false},
             {'description': 'Need to buy ...', 'isDone': false}
           ];
-          $scope.tempArchiveList = [];
-          $scope.archivedList = [];
+          _this.tempArchiveList = [];
+          _this.archivedList = [];
         };
 
-        $scope.removeFromList = function (array, indexToBeRemoved) {
+        _this.removeFromList = function (array, indexToBeRemoved) {
           array.splice(indexToBeRemoved, 1);
         };
 
       },
+      controllerAs:'todoCtrl',
       link: function (scope, element, attrs) {
       }
     };

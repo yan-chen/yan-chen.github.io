@@ -7,7 +7,8 @@ angular
     'ngSanitize',
     'ui.router',
     'ui.bootstrap',
-    'akoenig.deckgrid'
+    'akoenig.deckgrid',
+    'LocalStorageModule'
   ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider.when('/','/about');

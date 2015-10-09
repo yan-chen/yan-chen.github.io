@@ -1,49 +1,78 @@
 
-/*AO Widgets */
+.portfolio-widget-example .widget-wrapper
+  width 30rem
+  height 24.1rem
+  margin-bottom 2rem
+
+
+.portfolio-widget-example .widget-wrapper.panel
+  height 30rem
+  margin-bottom 2rem
+  border none
+
+.portfolio-widget-example .widget-wrapper.panel .panel-heading
+  padding 1.5rem
+  font-size $rext-5x
+  color #767676
+
+.portfolio-widget-example .widget-wrapper.panel .panel-body
+  height 24.1rem
+
+
+.ao-widget,
+.pp-widget
+  height 100%
+
+
+.widget-color-theme-option
+  width 30px
+  height 30px
+  border-radius 5px
+
 
 .ao-widget .ao-date
   margin 0
   height 60%
   position relative
-  font-size 40px
-  line-height 40px
+  font-size 4rem
+  line-height 4rem
   text-align center
   font-weight bold
-  background #fff
-  padding 25px 15px
+  background #efefef
+  padding 2.5rem 1.5rem
   color #666
   text-shadow 1px 1px 0px rgba(255, 255, 255, 0.1)
 
 
-.ao-widget .ao-dateafter
+.ao-widget .ao-date:after
   content " "
-  border-right 20px solid transparent
-  border-left 20px solid transparent
+  border-right 2rem solid transparent
+  border-left 2rem solid transparent
   position absolute
-  bottom -20px
+  bottom -2rem
   left 20%
-  border-top 20px solid #fff
+  border-top 2rem solid #efefef
 
 
 .ao-widget .ao-date .glyphicon-calendar
-  font-size 60px
-  margin-top 30px
+  font-size 5rem
+  margin-top 2rem
 
 
 .ao-widget .ao-date .col-xs-9
   text-align left
-  padding-left 30px
+  padding-left 3rem
 
 
 .ao-widget .ao-date .ao-text-date
   display block
-  font-size 20px
+  font-size 2rem
 
 
 .ao-widget .ao-greeting
   height 40%
-  padding 35px 0
-  font-size 24px
+  padding 3.5rem 0
+  font-size 2.4rem
   font-weight bold
   color rgba(255, 255, 255, 0.9)
   text-shadow 1px 1px 0px rgba(0, 0, 0, 0.1)
@@ -51,34 +80,30 @@
 
 
 .ao-widget .ao-greeting-msg
-  font-size 30px
-  margin-left 5px
+  font-size 3rem
+  margin-left .5rem
 
 
 /* PP widget*/
-.pp-widget
-  backgound-color #ffffff
-
-
 .pp-widget .pp-widget-date
-  height 241px
-  padding 30px 10px
+  height 24.1rem
+  padding 3rem 1rem
   text-align center
   color #fff
   position relative
 
 
 .pp-widget .pp-days-bg-blocks
-  height 70px
+  height 7rem
 
 
-.pp-widget .pp-days-bg-blocksafter
+.pp-widget .pp-days-bg-blocks:after
   content attr(data-num)
   position absolute
-  left 10px
-  letter-spacing 18px
-  padding 3px
-  font-size 50px
+  left 1rem
+  letter-spacing 1.8rem
+  padding 0.3rem
+  font-size 5rem
   font-weight bold
   color #666
 
@@ -86,23 +111,23 @@
 .pp-widget .pp-days-bg-blocks .background-lb,
 .pp-widget .pp-days-bg-blocks .background-rb
   position absolute
-  top 35px
-  height 65px
-  width 40px
+  top 3.5rem
+  height 6.5rem
+  width 4rem
   background-color #fff
-  border-radius 3px
-  box-shadow 1px 3px 5px #0f0f0f
+  border-radius 0.3rem
+  box-shadow 1px 0.3rem 0.5rem #0f0f0f
 
 
 .pp-widget .pp-days-bg-blocks .background-lb
-  left 8px
+  left .8rem
 
 
 .pp-widget .pp-days-bg-blocks .background-rb
-  right 8px
+  right .8rem
 
 
-.pp-widget .pp-days-bg-blocks .background-lbafter, .pp-widget .pp-days-bg-blocks .background-rbafter
+.pp-widget .pp-days-bg-blocks .background-lb:after, .pp-widget .pp-days-bg-blocks .background-rb:after
   content ""
   display block
   position absolute
@@ -110,7 +135,7 @@
   width 100%
   height 100%
   border-bottom solid 1px #aaa
-  box-shadow 1px 1px 3px #0f0f0f
+  box-shadow 1px 1px 0.3rem #0f0f0f
   border-radius 2px
 
 
@@ -120,34 +145,35 @@
   border-left none
   border-right none
   position absolute
-  top 13px
+  top 1.3rem
   z-index 9999
   width 100%
 
 
 .pp-widget .pp-widget-right
   padding 0
-  height 241px
+  height 24.1rem
   text-align center
+  background #efefef
 
 
 .pp-widget .pp-widget-associate
   height 35%
-  font-size 20px
+  font-size 2rem
   color #666
   font-weight bold
-  padding 25px 10px 0 10px
+  padding 2.5rem 1rem 0 1rem
 
 
-.pp-widget .pp-widget-associate .pp-widget-associate-svgafter
+.pp-widget .pp-widget-associate .pp-widget-associate-svg:after
   position absolute
-  height 40px
-  width 40px
+  height 4rem
+  width 4rem
   content attr(data-num)
   margin-left -35%
   margin-top 13%
-  line-height 40px
-  font-size 50px
+  line-height 4rem
+  font-size 5rem
   text-align center
   color #ffffff
 
@@ -155,16 +181,21 @@
 .pp-widget .pp-widget-cvp
   position absolute
   padding-top 18%
-  top 120px
+  top 12rem
   bottom 0
   width 100%
-  font-size 25px
+  font-size 2.5rem
   font-weight bold
   color #666
 
 
 .pp-widget .pp-widget-cvp .pp-widget-cvp-number
-  margin-left 5px
-  font-size 45px
+  margin-left 0.5rem
+  font-size 4.5rem
+
+
+.portfolio-widget-example .color-theme-btn-group,
+.portfolio-widget-example .form-group.row
+  margin 2rem 0
 
 

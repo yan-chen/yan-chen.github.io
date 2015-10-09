@@ -1,53 +1,112 @@
-.modal.portfolio-demo-modal
+
+.portfolio-container .portfolio-widget-container
+  padding 4rem 2rem 2rem
+
+
+.portfolio-container .portfolio-panel
+  min-width 26.2rem
+
+.portfolio-container .portfolio-panel .panel-body
+  max-width 40rem
+  margin 0 auto
+
+.portfolio-container .portfolio-widget
+  height 20.5rem
+  min-width 26rem
+  overflow hidden
+  text-align center
+  background-size cover
+
+
+.portfolio-container .portfolio-widget .portfolio-widget-overlay
+  background-color rgba(0, 0, 0, 0.10)
+  padding-top 6rem
+  width 100%
+  height 100%
+
+.portfolio-container .portfolio-widget .portfolio-widget-overlay:hover
+  background-color rgba(0, 0, 0, .6)
+
+
+.portfolio-container .portfolio-widget .btn.portfolio-widget-overlay-btn
+  background-color transparent
+  bordernone
+  colortransparent
+  -webkit-transition all linear 0.25s
+  -moz-transition all linear 0.25s
+  -ms-transition all linear 0.25s
+  -o-transition all linear 0.25s
+  transition all linear 0.25s
+  -webkit-transform rotateY(90deg)
+  -moz-transform rotateY(90deg)
+  -ms-transform rotateY(90deg)
+  -o-transform rotateY(90deg)
+  transform rotateY(90deg)
+  padding 1.5rem 2.5rem
+
+
+.portfolio-container .portfolio-widget .portfolio-widget-overlay:hover .btn.portfolio-widget-overlay-btn
+  bordersolid #fff .3rem
+  color #fff
+  padding 1.5rem 4rem
+  font-size 2rem
+  -webkit-transform rotateY(0deg)
+  -moz-transform rotateY(0deg)
+  -ms-transform rotateY(0deg)
+  -o-transform rotateY(0deg)
+  transform rotateY(0deg)
+
+.portfolio-container .portfolio-widget .portfolio-widget-overlay-touch-device
+  background-color rgba(0, 0, 0, 0.50)
+  padding-top 6rem
+  width 100%
+  height 100%
+
+.portfolio-container .portfolio-widget .portfolio-widget-overlay-touch-device .btn.portfolio-widget-overlay-btn
+  bordersolid #fff .3rem
+  color #fff
+  padding15px 4rem
+  font-size 2rem
+  -webkit-transform rotateY(0deg)
+  -moz-transform rotateY(0deg)
+  -ms-transform rotateY(0deg)
+  -o-transform rotateY(0deg)
+  transform rotateY(0deg)
+
+
+/* ---------------------- */
+
+
+
 
 .portfolio-demo-modal
   min-width 33rem
-  width 60%
-  max-width 140rem
+  width 90%
+  max-width 100rem
   margin 0 auto
   max-height 90%
   margin-top 5rem
-
+  font-size $text-3x
 
 .portfolio-demo-modal .modal-dialog
   width 100%
   height 100%
-  margin 0
-
 
 .portfolio-demo-modal .modal-content
-  margin 0
-  min-height 30rem
-  background transparent
-  color white
-  border none
-  position relative
-  box-shadow none
+  padding 0
 
 .portfolio-demo-modal .modal-content .modal-header
-  border none
-  padding 1rem
-  background transparent
-
+  padding 2rem 3rem
 
 .portfolio-demo-modal .modal-content .modal-header i
-  font-size $text-10x
-  color #ffffff
+  font-size $text-5x
   padding 1.5rem
-  border solid 3px #fff
-  border-radius 50%
-  font-weight 100
   margin-top -1rem
 
 .portfolio-demo-modal .modal-content .modal-body
-  padding 0 3rem 3rem
+  padding 3rem
   overflow auto
   width 100%
-  height 100%
-  text-align center
-  border none
-  position fixed
-  margin-top 4rem
 
 .portfolio-demo-modal .modal-content .modal-body img
   max-width 100%

@@ -1,11 +1,9 @@
 <!---------------------------------- Demo Section -------------------------------->
-<div class="row relative">
-  <h4 class="yy-text-default">{{sectionTitle}}</h4>
-  <hr class="title-separator-bold"/>
+<div class="row">
   <div class="row portfolio-widget-container-row">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-9 portfolio-widget-container"
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 portfolio-widget-container text-center"
          ng-repeat="demo in demos">
-      <div class="panel yy-panel-box-dark portfolio-panel">
+      <div class="panel portfolio-panel">
         <div class="panel-heading">
           <div class="panel-title">{{demo.demoName}}</div>
         </div>
@@ -13,7 +11,7 @@
           <div ng-if="!isTouchDevice" class="portfolio-widget"
                ng-style="{'background-image':'url({{demo.demoThumbPath}})'}">
             <div class="portfolio-widget-overlay">
-              <div class="btn btn-default portfolio-widget-overlay-btn" ng-click="widgetCtrl.openModal(demo,'portfolio-demo-modal')">
+              <div class="btn btn-default portfolio-widget-overlay-btn" ng-click="widgetCtrl.openModal(demo)">
                 View
               </div>
             </div>
@@ -21,7 +19,7 @@
           <div ng-if="isTouchDevice" class="portfolio-widget-overlay-touch-device"
                ng-style="{'background-image':'url({{demo.demoThumbPath}})'}">
             <div class="portfolio-widget-overlay">
-              <div class="btn btn-default portfolio-widget-overlay-btn"  ng-click="widgetCtrl.openModal(demo)">
+              <div class="btn btn-default portfolio-widget-overlay-btn" ng-click="widgetCtrl.openModal(demo)">
                 View
               </div>
             </div>

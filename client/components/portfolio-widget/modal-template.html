@@ -1,15 +1,14 @@
 <!-- Demo Modal -->
 <div class="modal-header">
   <i class="glyphicon glyphicon-remove float-right" ng-click="ModalCtrl.cancel()"></i>
-  <h3 ng-if="ModalCtrl.data.demoPath" class="modal-title">Demo for {{ModalCtrl.data.demoName}}</h3>
 
-  <h3 ng-if="ModalCtrl.data.demoPath===undefined" class="modal-title">Mockup for {{ModalCtrl.data.demoName}}</h3>
+  <div class="modal-title text-4x"><strong>Demo for {{ModalCtrl.data.demoName}}</strong></div>
 </div>
+
 <div class="modal-body">
-  <div ng-if="ModalCtrl.data.demoPath" data-ng-bind-html-unsafe="'<button></button>'" class="modal-body-inner">
+  <div class="modal-body-inner">
+    <div ng-if="ModalCtrl.data.demoType==='todo'" data-example-todo></div>
+    <div ng-if="ModalCtrl.data.demoType==='widget'" data-example-widget></div>
   </div>
-  <div ng-if="!ModalCtrl.data.demoPath" class="modal-body-inner">
-    <img ng-src="{{ModalCtrl.data.demoThumbPath}}" alt=""/>
-  </div>
+  <!---------------------------------- END Demo Section -------------------------------->
 </div>
-<!---------------------------------- END Demo Section -------------------------------->

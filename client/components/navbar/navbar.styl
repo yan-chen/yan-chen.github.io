@@ -31,12 +31,17 @@
 
 .yy-nav .logo
   width 30%
+  min-width 18rem
   border 1rem solid white
   transform rotate(-20deg)
   -ms-transform rotate(-20deg) /* IE 9 */
   -webkit-transform rotate(-20deg) /* Chrome, Safari, Opera */
-  @media screen and (max-width: 640px)
-    width 40%
+  @media screen and (max-width: 767px)
+    margin-top -3rem
+  @media screen and (min-width: 1200px)
+    transform rotate(-15deg)
+    -ms-transform rotate(-15deg) /* IE 9 */
+    -webkit-transform rotate(-15deg) /* Chrome, Safari, Opera */
 
 .yy-nav .nav.yy-nav-menu
   float right

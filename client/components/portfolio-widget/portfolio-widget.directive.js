@@ -9,7 +9,11 @@ portfolioWidget.$inject = [];
 function portfolioWidget() {
   return {
     controller:function(modalService){
-      this.openModal=modalService.openModal;
+      var url='components/portfolio-widget/modal-template.html';
+      var modalClass='portfolio-demo-modal';
+      this.openModal=function(data){
+        modalService.openModal(url,data,null,modalClass);
+      }
     },
     controllerAs:'widgetCtrl',
     templateUrl: 'components/portfolio-widget/portfolio-widget.html',
@@ -18,8 +22,6 @@ function portfolioWidget() {
     },
     restrict: 'EA',
     link: function (scope, element, attrs) {
-      scope.isImageOnly = attrs.imageOnly? true:false;
-      scope.sectionTitle = attrs.sectionTitle;
       //scope.isTouchDevice = !!('ontouchstart' in window);
       //console.log(scope.isTouchDevice)
       scope.setCurrentDemo = function (demo) {

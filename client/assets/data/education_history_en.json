@@ -8,7 +8,10 @@
     "location": "Salt Lake City, Utah",
     "startYear": "2015",
     "endYear": "Present",
-    "description":[]
+    "description":[
+      "Data mining & data warehouse",
+      "Data analysis & data visualization"
+    ]
   },
   {
     "major": "Business Information Systems",
@@ -19,6 +22,10 @@
     "location": "Salt Lake City, Utah",
     "startYear": "2010",
     "endYear": "2013",
-    "description": []
+    "description": [
+      "Business communication & management",
+      "Database management",
+      "Web application"
+    ]
   }
   ]

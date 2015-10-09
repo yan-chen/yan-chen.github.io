@@ -5,8 +5,8 @@
 <div class="modal-body">
   <div class="col-lg-12 gallery-list-row-container">
     <div class="gallery-list-row">
-      <div class="row">
-        <div class="col-lg-7 col-md-7 col-sm-12 com-xs-12">
+      <div class="row margin-0">
+        <div class="col-lg-7 col-md-7 col-sm-12 com-xs-12 padding-0">
           <a href="{{ModalCtrl.data.link}}" target="_blank" data-toggle="tooltip" data-placement="right"
              title="{{ModalCtrl.data.images.standard_resolution.url}}">
             <img src="{{ModalCtrl.data.images.standard_resolution.url}}" class="full-width"/>
@@ -20,10 +20,11 @@
           <!--https://instagram.com/explore/tags/-->
           <p>
             <i class="glyphicon glyphicon-heart-empty text-red"></i> {{ModalCtrl.data.likes.count}} &nbsp;
-            <i class="fa fa-comment-o text-black"></i> {{ModalCtrl.data.comments.count}}
+            <!--<i class="fa fa-comment-o text-black"></i> {{ModalCtrl.data.comments.count}}-->
             <span class="float-right text-1x"> {{ModalCtrl.data.created_time*1000| date:'MMM dd, yyyy'}}</span>
           </p>
-          <hr/>
+          <hr class="hidden-xs"/>
+          <hr class="hr-min visible-xs"/>
           <p class="gallery-image-caption">{{ModalCtrl.data.caption.text}}</p>
 
           <div ng-repeat="comment in ModalCtrl.data.comments.data track by $index">

@@ -22,17 +22,19 @@
     <div class="row margin-0">
       <div class="title tooltip-dark" data-toggle="tooltip" data-placement="right"
            title="ID: {{GalleryCtrl.currentUser.id}}" data-animation="true">
-        Current gallery from user:&nbsp;&nbsp;&nbsp;
-        <img ng-src="{{GalleryCtrl.currentUser.profile_picture}}" alt="user"
-             class="gallery-instagram-user-thumb-sm img-circle"/>
-        <a href="http://www.instagram.com/{{GalleryCtrl.currentUser.username}}" class="tooltip-dark"
-           data-toggle="tooltip" data-placement="right"
-           title="ID: {{GalleryCtrl.currentUser.id}}">
-          {{GalleryCtrl.currentUser.username}}</a>
-        <span class="text-1x"> ( <strong>{{GalleryCtrl.currentUser.full_name + ',' || ''}}</strong> {{GalleryCtrl.currentUser.counts.media}} posts )</span>
+        <span class="float-left margin-bt-1">Current gallery from user:&nbsp;&nbsp;&nbsp;</span>
+        <div class="float-left">
+          <img ng-src="{{GalleryCtrl.currentUser.profile_picture}}" alt="user"
+               class="gallery-instagram-user-thumb-sm img-circle"/>
+          <a href="http://www.instagram.com/{{GalleryCtrl.currentUser.username}}" class="tooltip-dark"
+             data-toggle="tooltip" data-placement="right"
+             title="ID: {{GalleryCtrl.currentUser.id}}">
+            {{GalleryCtrl.currentUser.username}}</a>
+          <span class="text-1x"> ( <strong>{{GalleryCtrl.currentUser.full_name + ',' || ''}}</strong> {{GalleryCtrl.currentUser.counts.media}} posts )</span>
+        </div>
       </div>
 
-      <div class="padding-15-lr text-1x">
+      <div class="padding-15-lr text-1x col-xs-12">
         <h6>*This is an example to show the searching functionality of Instagram's API.<br/>
           *Images belong to Instagram user shown above.</h6>
       </div>
@@ -75,11 +77,11 @@
 
     <div class="tool-icon float-right" ng-click="GalleryCtrl.isGridView=false"
          ng-class="{'active':GalleryCtrl.isGridView===false}">
-      <i class="fa fa-th-list"></i>
+      <i class="glyphicon glyphicon-th-list"></i>
     </div>
     <div class="tool-icon float-right" ng-click="GalleryCtrl.isGridView=true"
          ng-class="{'active':GalleryCtrl.isGridView===true}">
-      <i class="fa fa-th"></i>
+      <i class="glyphicon glyphicon-th"></i>
     </div>
   </div>
 

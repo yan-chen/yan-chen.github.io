@@ -20,23 +20,32 @@
 .gallery-container .gallery-image-image
   width 100%
 
+.gallery-index
+  color #b3b3b3
 
- /*-------------*/
+
+.gallery-container .gallery-description
+  color #8b4d21
+
+.gallery-container .gallery-thumb-caption
+  height 6rem
+  overflow hidden
+
+/*-------------*/
 .modal-backdrop.fade
   opacity .7
-  filter blur(5px)
 
 .gallery-modal
   min-width 33rem
   width 80%
   max-width 120rem
-  margin 0 auto
   max-height 90%
+  margin 0 auto
   margin-top 1rem
   font-size $text-2x
   color gray
   @media screen and (max-width: 767px)
-    width 98%
+    width 100%
     margin-top 0
     font-size $text-3x
 
@@ -66,25 +75,39 @@
     font-size 3.5rem
 
 .gallery-modal .modal-content .modal-body
-  overflow auto
+  overflow-y auto
+  overflow-x hidden
   max-width 100%
   border none
   position fixed
   top 10rem
   bottom 0
+  padding 0
   @media screen and (max-width: 767px)
     top 8rem
 
+.gallery-modal .modal-content .modal-body  .gallery-list-row
+  margin-bottom 0
+  @media screen and (max-width: 767px)
+    padding 0
+
 .gallery-modal .modal-content .modal-body  .gallery-list-row-container
   background #fff
+  @media screen and (max-width: 767px)
+    padding 0
 
 .gallery-modal .modal-content .modal-body img
   width 100%
+  margin-bottom 1rem
+
+.gallery-modal .modal-content .modal-body .gallery-list-caption
+  @media screen and (max-width: 767px)
+    padding 1.5rem 4rem 4rem
 
 .gallery-modal .modal-content .modal-body .gallery-list-caption .gallery-image-caption,
 .gallery-modal .modal-content .modal-body .gallery-image-comment
   @media screen and (max-width: 767px)
-    font-size $text-4x
+    font-size $text-3x
 
 
 .gallery-modal .modal-content .modal-body .gallery-image-comment img
