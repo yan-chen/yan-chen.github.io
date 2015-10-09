@@ -1,0 +1,12 @@
+[
+  {
+    "demoName": "AngularJS To Do List",
+    "demoType": "todo",
+    "demoThumbPath": "assets/examples/yy_portfolio_todo_thumb.png"
+  },
+  {
+    "demoName": "Sample Widgets",
+    "demoType": "widget",
+    "demoThumbPath": "assets/examples/yy_portfolio_widget_thumb.png"
+  }
+]
