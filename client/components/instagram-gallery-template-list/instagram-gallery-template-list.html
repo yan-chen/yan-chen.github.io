@@ -1,8 +1,8 @@
 <div class="row gallery-row">
-  <div ng-repeat-start="gallery in galleries|orderBy:isReverse |orderBy:orderVar track by $index" class="col-lg-12 gallery-list-row-container">
+  <div ng-repeat-start="gallery in galleries|orderBy:isReverse |orderBy:orderVar track by $index" class="col-lg-12 gallery-list-row-container padding-0">
     <div class="gallery-list-row">
       <div class="row">
-        <div class="gallery-list-image col-lg-6 col-md-6 col-sm-6 com-xs-8">
+        <div class="gallery-list-image col-lg-6 col-md-6 col-sm-6 com-xs-8 padding-0">
           <a href="{{gallery.link}}" target="_blank" data-toggle="tooltip" data-placement="right"
              title="{{gallery.images.standard_resolution.url}}">
             <img src="{{gallery.images.standard_resolution.url}}" class="full-width"/>

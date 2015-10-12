@@ -26,9 +26,9 @@
 .portfolio-container .section-title:before
   content ' '
   position absolute
-  width 4rem
+  width 5rem
   height 0
-  left -2rem
+  left -3rem
   top 1.3rem
   border-width 2rem 1rem
   border-style solid
@@ -48,10 +48,21 @@
 
 .portfolio-container .portfolio-examples-container
   @media screen and (max-width: 967px)
-    margin-top 4rem
+    margin-top 3rem
   @media screen and (min-width: 968px) and (max-width: 1299px)
-    margin-top 6rem
-  @media screen and (min-width: 1300px)and (max-width: 1399px)
-    margin-top 10rem
-  @media screen and (min-width: 1400px)
-    margin-top 12rem
+    margin-top 5rem
+  @media screen and (min-width: 1300px)
+    margin-top 7rem
+
+
+/*----------------------*/
+.portfolio-mockup-container
+  padding 4rem 0
+
+.portfolio-mockup-container .mockup-title
+  font-size $text-3x
+  padding 1rem
+
+.portfolio-mockup-container .image-container
+  max-width 80rem
+  margin 0 auto
