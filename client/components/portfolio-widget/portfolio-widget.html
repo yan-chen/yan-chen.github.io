@@ -8,7 +8,7 @@
           <div class="panel-title">{{demo.demoName}}</div>
         </div>
         <div class="panel-body no-padding">
-          <div ng-if="!isTouchDevice" class="portfolio-widget"
+          <div ng-if="!widgetCtrl.isTouchDevice" class="portfolio-widget"
                ng-style="{'background-image':'url({{demo.demoThumbPath}})'}">
             <div class="portfolio-widget-overlay">
               <div class="btn btn-default portfolio-widget-overlay-btn" ng-click="widgetCtrl.openModal(demo)">
@@ -16,7 +16,7 @@
               </div>
             </div>
           </div>
-          <div ng-if="isTouchDevice" class="portfolio-widget-overlay-touch-device"
+          <div ng-if="widgetCtrl.isTouchDevice" class="portfolio-widget-overlay-touch-device"
                ng-style="{'background-image':'url({{demo.demoThumbPath}})'}">
             <div class="portfolio-widget-overlay">
               <div class="btn btn-default portfolio-widget-overlay-btn" ng-click="widgetCtrl.openModal(demo)">

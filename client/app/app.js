@@ -21,6 +21,10 @@ angular
 
   .run(function ($state, $rootScope) {
     $rootScope.$state = $state;
+    $rootScope.isTouchDevice=function(){
+      console.log('ontouchstart' in document.documentElement);
+      return 'ontouchstart' in document.documentElement;
+    };
 
     $rootScope.$on('$stateChangeStart', function () {
       $rootScope.isPageLoading = true;

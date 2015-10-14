@@ -89,13 +89,11 @@
        data-order-var="GalleryCtrl.orderVar">
   </div>
 
-  <div class="padding-15-lr">
-    <div ng-if="!GalleryCtrl.isGridView" instagram-gallery-template-list="" data-galleries="GalleryCtrl.currentMedia"
-         data-is-reverse="GalleryCtrl.reverseOrder" data-limit-num="GalleryCtrl.limitNum"
-         data-order-var="GalleryCtrl.orderVar">
-    </div>
-
+  <div ng-if="!GalleryCtrl.isGridView" instagram-gallery-template-list="" data-galleries="GalleryCtrl.currentMedia"
+       data-is-reverse="GalleryCtrl.reverseOrder" data-limit-num="GalleryCtrl.limitNum"
+       data-order-var="GalleryCtrl.orderVar">
   </div>
+
 
   <div class="row text-center gallery-loadmore margin-0"
        ng-if="GalleryCtrl.nextUrl && GalleryCtrl.currentMedia.length<GalleryCtrl.currentUser.counts.media">

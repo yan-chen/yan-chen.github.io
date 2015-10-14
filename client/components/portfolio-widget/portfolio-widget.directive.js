@@ -8,12 +8,14 @@ portfolioWidget.$inject = [];
 
 function portfolioWidget() {
   return {
-    controller:function(modalService){
+    controller:function(modalService,$rootScope){
       var url='components/portfolio-widget/modal-template.html';
       var modalClass='portfolio-demo-modal';
       this.openModal=function(data){
         modalService.openModal(url,data,null,modalClass);
-      }
+      };
+      this.isTouchDevice = $rootScope.isTouchDevice();
+
     },
     controllerAs:'widgetCtrl',
     templateUrl: 'components/portfolio-widget/portfolio-widget.html',

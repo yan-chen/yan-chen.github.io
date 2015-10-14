@@ -10,5 +10,4 @@ function PortfolioCtrl(PromoisedMockupExamples,PromoisedCodingExamples) {
   _this.mockUpExamples =PromoisedMockupExamples;
   _this.codingExamples = PromoisedCodingExamples;
 
-
 }

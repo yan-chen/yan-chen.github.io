@@ -31,7 +31,6 @@ function NavbarCtrl() {
   this.isAsideVisible = false;
   this.toggleAsideNav = function () {
     this.isAsideVisible = !this.isAsideVisible;
-    console.log(this.isAsideVisible);
   };
 
 }
