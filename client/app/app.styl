@@ -33,7 +33,7 @@ body.isAsideOpen .ui-view-container
   position relative
   margin-right 15rem
   filter blur(5px)
-
+  overflow-y hidden
 
 body.isAsideOpen .ui-view-fade.hidden
   display block !important
@@ -226,3 +226,14 @@ $yy-earth = #e2d6b8
 @import '../components/resume-timeline/resume-timeline.styl';
 @import '../components/todo-example/todo.styl';
 // endinjector
+
+
+
+/*--------*/
+.loading-indicator
+  position absolute
+  top 0
+  left 0
+  right 0
+  bottom 0
+  background rgba(0,0,0,.7)

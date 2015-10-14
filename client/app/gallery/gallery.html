@@ -2,17 +2,17 @@
 
 <div class="yy-container gallery-container">
   <div class="gallery-introduction text-left">
-    <h3>
+    <h4>
       <!--<a href="http://instagram.com/mynameisyan?ref=badge" class="ig-b- ig-b-32">-->
       <!--<img src="//badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram"/>-->
       <!--</a>-->
       <img ng-src="{{GalleryCtrl.myAccount.profile_picture}}" alt="@mynameisyan"
            class="gallery-instagram-user-thumb img-circle"/>
       <a href="http://www.instagram.com/mynameisyan">{{GalleryCtrl.myAccount.username}}</a>
-    </h3>
+    </h4>
 
     <div>
-      <span class="gallery-description text-3x">Photos help me with better remembering the places I've been to and experiences
+      <span class="gallery-description text-3x">I love taking photos. Photos help me with better remembering the places I've been to and experiences
         I've had. </span>
     </div>
     <!--<h6>*Images are pulled from my Instagram account.</h6>-->
@@ -96,7 +96,8 @@
     </div>
 
   </div>
-  <div class="clearfix text-center gallery-loadmore" ng-if="GalleryCtrl.nextUrl">
+
+  <div class="row text-center gallery-loadmore margin-0" ng-if="GalleryCtrl.nextUrl && GalleryCtrl.currentMedia.length<GalleryCtrl.currentUser.counts.media">
     <button class="btn btn-primary-transparent" ng-click="GalleryCtrl.loadMore()">Load More
       &nbsp; &nbsp;<i class="glyphicon glyphicon-chevron-down text-1x"></i></button>
   </div>

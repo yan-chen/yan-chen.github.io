@@ -16,7 +16,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <link rel="stylesheet" href="app/vendor.8f68f029.css">
-  <link rel="stylesheet" href="app/app.cd2755b6.css">
+  <link rel="stylesheet" href="app/app.f274e4dd.css">
 </head>
 <body ng-app="yyPageApp" ng-controller="NavbarCtrl" ng-class="{'isAsideOpen':NavCtrl.isAsideVisible}">
 <!--[if lt IE 7]>
@@ -30,7 +30,9 @@
 <navside></navside>
 <div ui-view class="ui-view-container"></div>
 <div class="ui-view-fade hidden" ng-click="NavCtrl.toggleAsideNav()"></div>
-
+<div class="loading-indicator" ng-if="isPageLoading">
+  <img src="assets/images/loader-square.gif" alt=""/>
+</div>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
@@ -55,6 +57,6 @@
 <script src="bower_components/json3/lib/json3.min.js"></script>
 <![endif]-->
 <script src="app/vendor.774a4be6.js"></script>
-<script src="app/app.ce8c18c1.js"></script>
+<script src="app/app.c4789037.js"></script>
 </body>
 </html>

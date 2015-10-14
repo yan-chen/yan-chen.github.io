@@ -11,23 +11,25 @@
 <!--</div>-->
 <!--</div>-->
 
+<div class="row margin-0">
 
-<div ng-repeat-start="gallery in galleries |orderBy:isReverse | orderBy:orderVar track by $index"
-     class="gallery-thumb-box col-xs-4 col-sm-4 col-md-3 col-lg-3">
-  <div class="gallery-thumb-container" ng-click="templateCtrl.openModal(gallery,$index)">
-    <img src="{{gallery.images.thumbnail.url}}" class="full-width"/>
+  <div ng-repeat-start="gallery in galleries |orderBy:isReverse | orderBy:orderVar track by $index"
+       class="gallery-thumb-box col-xs-4 col-sm-4 col-md-3 col-lg-2">
+    <div class="gallery-thumb-container" ng-click="templateCtrl.openModal(gallery,$index)">
+      <img src="{{gallery.images.thumbnail.url}}" class="full-width"/>
+    </div>
+    <div class="gallery-thumb-caption">
+      <span class="hidden-xs">{{gallery.location.name}}&nbsp;</span><br/>
+
+      <p><i class="glyphicon glyphicon-heart-empty text-red"></i>
+        {{gallery.likes.count}}
+        <span class="float-right gallery-index">#{{$index+1}}</span>
+      </p></div>
   </div>
-  <div class="gallery-thumb-caption">
-    <span class="hidden-xs">{{gallery.location.name}}&nbsp;</span><br/>
+  <!--<div ng-if="viewDetails" class="clearfix" style="border:solid red 2px; height:30rem;">-->
+  <!--<img src="{{gallery.images.standard_resolution.url}}" class="full-width"/>-->
 
-    <p><i class="glyphicon glyphicon-heart-empty text-red"></i>
-      {{gallery.likes.count}}
-      <span class="float-right gallery-index">#{{$index+1}}</span>
-    </p></div>
+
+  <!--</div>-->
+  <div ng-repeat-end=""></div>
 </div>
-<!--<div ng-if="viewDetails" class="clearfix" style="border:solid red 2px; height:30rem;">-->
-<!--<img src="{{gallery.images.standard_resolution.url}}" class="full-width"/>-->
-
-
-<!--</div>-->
-<div ng-repeat-end=""></div>

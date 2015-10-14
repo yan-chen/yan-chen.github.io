@@ -6,7 +6,7 @@
   height 40rem
   @media screen and (max-width: 767px)
     height 30rem
-  @media screen and (max-width: 342px)
+  @media screen and (max-width: 400px)
     height 20rem
 
 .yy-nav.isAsideOpen
@@ -16,6 +16,8 @@
   width 100%
   height 100%
   background rgba(0,0,0,.3 )
+  @media screen and (max-width: 400px)
+    background transparent
 
 .yy-nav .nav-container
   position absolute
@@ -29,15 +31,20 @@
 .yy-nav .nav-container .navbar-toggle
   margin-bottom -3rem
 
+.yy-nav .nav-container .navbar-toggle .icon-bar
+  background white
+
 .yy-nav .logo
   width 25%
-  min-width 18rem
-  border 1rem solid white
+  min-width 10rem
+  border 0.8rem solid white
   transform rotate(-20deg)
   -ms-transform rotate(-20deg) /* IE 9 */
   -webkit-transform rotate(-20deg) /* Chrome, Safari, Opera */
   @media screen and (max-width: 767px)
     margin-top -3rem
+  @media screen and (max-width: 400px)
+    visibility hidden
   @media screen and (min-width: 1200px)
     transform rotate(-15deg)
     -ms-transform rotate(-15deg) /* IE 9 */
