@@ -1,4 +1,4 @@
-<div class="gallery-container-fade"></div>
+<!--<div class="gallery-container-fade"></div>-->
 
 <div class="yy-container gallery-container">
   <div class="gallery-introduction text-left">
@@ -11,27 +11,25 @@
       <a href="http://www.instagram.com/mynameisyan">{{GalleryCtrl.myAccount.username}}</a>
     </h4>
 
-    <div>
-      <span class="gallery-description text-3x">I love taking photos. Photos help me with better remembering the places I've been to and experiences
-        I've had. </span>
-
+    <div class="gallery-description text-3x">
+      I love taking photos, especially when travelling.
+      <br/>Photos help me with better remembering the places I've been to and experiences I've had.
     </div>
-    <!--<h6>*Images are pulled from my Instagram account.</h6>-->
   </div>
 
   <div class="user-search-container">
     <!-- input-group -->
-          <span class="input-group search-box full-width">
-            <input type="text" class="form-control" placeholder="Search for an Instagram user"
-                   ng-model="user"
-                   typeahead="result as result.username for result in GalleryCtrl.searchUser($viewValue)"
-                   typeahead-no-results="noResults" typeahead-loading="isLoading" typeahead-wait-ms="200"
-                   typeahead-on-select="GalleryCtrl.changeUser(user)" typeahead-template-url="searchresult.html">
-                   <!--ng-keyup="$event.keyCode == 13 ? GalleryCtrl.changeUser(username) : null">-->
-                <button class="btn btn-search" ng-click="GalleryCtrl.changeUser(user)" ng-disabled="!user">
-                  <i class="glyphicon glyphicon-search text-5x"></i>
-                </button>
-          </span>
+      <span class="input-group search-box full-width">
+        <input type="text" class="form-control" placeholder="Search for other Instagram user"
+               ng-model="user"
+               typeahead="result as result.username for result in GalleryCtrl.searchUser($viewValue)"
+               typeahead-no-results="noResults" typeahead-loading="isLoading" typeahead-wait-ms="200"
+               typeahead-on-select="GalleryCtrl.changeUser(user)" typeahead-template-url="searchresult.html">
+               <!--ng-keyup="$event.keyCode == 13 ? GalleryCtrl.changeUser(username) : null">-->
+            <button class="btn btn-search" ng-click="GalleryCtrl.changeUser(user)" ng-disabled="!user">
+              <i class="glyphicon glyphicon-search text-5x"></i>
+            </button>
+      </span>
     <!-- /input-group -->
 
     <i class="glyphicon glyphicon-refresh" ng-if="isLoading"></i>

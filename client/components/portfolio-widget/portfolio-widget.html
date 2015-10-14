@@ -1,27 +1,25 @@
 <!---------------------------------- Demo Section -------------------------------->
-<div class="row">
-  <div class="row portfolio-widget-container-row">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 portfolio-widget-container"
-         ng-repeat="demo in demos">
-      <div class="panel portfolio-panel">
-        <div class="panel-heading">
-          <div class="panel-title">{{demo.demoName}}</div>
-        </div>
-        <div class="panel-body no-padding">
-          <div ng-if="!widgetCtrl.isTouchDevice" class="portfolio-widget"
-               ng-style="{'background-image':'url({{demo.demoThumbPath}})'}">
-            <div class="portfolio-widget-overlay">
-              <div class="btn btn-default portfolio-widget-overlay-btn" ng-click="widgetCtrl.openModal(demo)">
-                View
-              </div>
+<div class="clearfix portfolio-widget-container-row">
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 padding-0"
+       ng-repeat="demo in demos">
+    <div class="panel portfolio-panel">
+      <div class="panel-heading">
+        <div class="panel-title">{{demo.demoName}}</div>
+      </div>
+      <div class="panel-body no-padding">
+        <div ng-if="!widgetCtrl.isTouchDevice" class="portfolio-widget"
+             ng-style="{'background-image':'url({{demo.demoThumbPath}})'}">
+          <div class="portfolio-widget-overlay">
+            <div class="btn btn-default portfolio-widget-overlay-btn" ng-click="widgetCtrl.openModal(demo)">
+              View
             </div>
           </div>
-          <div ng-if="widgetCtrl.isTouchDevice" class="portfolio-widget"
-               ng-style="{'background-image':'url({{demo.demoThumbPath}})'}">
-            <div class="portfolio-widget-overlay-touch-device">
-              <div class="btn btn-default portfolio-widget-overlay-btn" ng-click="widgetCtrl.openModal(demo)">
-                View
-              </div>
+        </div>
+        <div ng-if="widgetCtrl.isTouchDevice" class="portfolio-widget"
+             ng-style="{'background-image':'url({{demo.demoThumbPath}})'}">
+          <div class="portfolio-widget-overlay-touch-device">
+            <div class="btn btn-default portfolio-widget-overlay-btn" ng-click="widgetCtrl.openModal(demo)">
+              View
             </div>
           </div>
         </div>
