@@ -2,7 +2,7 @@
   <div class="yy-timeline-box" ng-class-odd="'left'" ng-class-even="'right'">
     <div class="yy-timeline-box-inner">
       <div class="yy-timeline-image-container">
-        <a href="{{item.companyUrl}}"><img class="full-width" src="{{item.companyLogo}}" alt="" /></a>
+        <a href="{{item.companyUrl}}"><img class="full-width" ng-src="{{item.companyLogo}}" alt="" /></a>
       </div>
       <div class="yy-timeline-date">
         {{item.endMonth?  item.endMonth + ',' :''}} {{item.endYear}}
@@ -22,7 +22,7 @@
   <div class="yy-timeline-box right">
     <div class="yy-timeline-box-inner">
       <div class="yy-timeline-image-container">
-        <a href="{{item.companyUrl}}"><img class="full-width" src="{{item.companyLogo}}" alt="" /></a>
+        <a href="{{item.companyUrl}}"><img class="full-width" ng-src="{{item.companyLogo}}" alt="" /></a>
         <div class="yy-timeline-title" ng-if="item.level"><i class="fa fa-graduation-cap"></i></div>
       </div>
       <span> {{item.startYear}} - {{item.endYear}}</span>
