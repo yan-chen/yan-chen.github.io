@@ -39,7 +39,7 @@
  */
 
 .genericon {
-	font-size: 16px;
+	font-size: 30px;
 	vertical-align: top;
 	text-align: center;
 	-moz-transition: color .1s ease-in 0;
@@ -55,6 +55,8 @@
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	speak: none;
+  top: -1px;
+  position: relative;
 }
 
 
