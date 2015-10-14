@@ -14,56 +14,55 @@
     <div>
       <span class="gallery-description text-3x">I love taking photos. Photos help me with better remembering the places I've been to and experiences
         I've had. </span>
+
     </div>
     <!--<h6>*Images are pulled from my Instagram account.</h6>-->
   </div>
 
   <div class="user-search-container">
-    <div class="row margin-0">
-      <div class="title tooltip-dark" data-toggle="tooltip" data-placement="right"
-           title="ID: {{GalleryCtrl.currentUser.id}}" data-animation="true">
-        <span class="float-left margin-bt-1">Current gallery from user:&nbsp;&nbsp;&nbsp;</span>
-        <div class="float-left">
-          <img ng-src="{{GalleryCtrl.currentUser.profile_picture}}" alt="user"
-               class="gallery-instagram-user-thumb-sm img-circle"/>
-          <a href="http://www.instagram.com/{{GalleryCtrl.currentUser.username}}" class="tooltip-dark"
-             data-toggle="tooltip" data-placement="right"
-             title="ID: {{GalleryCtrl.currentUser.id}}">
-            {{GalleryCtrl.currentUser.username}}</a>
-          <span class="text-1x"> ( <strong>{{GalleryCtrl.currentUser.full_name + ',' || ''}}</strong> {{GalleryCtrl.currentUser.counts.media}} posts )</span>
-        </div>
-      </div>
+    <!-- input-group -->
+          <span class="input-group search-box full-width">
+            <input type="text" class="form-control" placeholder="Search for an Instagram user"
+                   ng-model="user"
+                   typeahead="result as result.username for result in GalleryCtrl.searchUser($viewValue)"
+                   typeahead-no-results="noResults" typeahead-loading="isLoading" typeahead-wait-ms="200"
+                   typeahead-on-select="GalleryCtrl.changeUser(user)" typeahead-template-url="searchresult.html">
+                   <!--ng-keyup="$event.keyCode == 13 ? GalleryCtrl.changeUser(username) : null">-->
+                <button class="btn btn-search" ng-click="GalleryCtrl.changeUser(user)" ng-disabled="!user">
+                  <i class="glyphicon glyphicon-search text-5x"></i>
+                </button>
+          </span>
+    <!-- /input-group -->
 
-      <div class="padding-15-lr text-1x col-xs-12">
-        <h6>*This is an example to show the searching functionality of Instagram's API.<br/>
-          *Images belong to Instagram user shown above.</h6>
-      </div>
-
-      <div class="text-right">
-        <!-- input-group -->
-        <span class="input-group search-box full-width">
-          <input type="text" class="form-control" placeholder="Enter Instagram user name to search"
-                 ng-model="user" typeahead="result as result.username for result in GalleryCtrl.searchUser($viewValue)"
-                 typeahead-no-results="noResults" typeahead-loading="isLoading" typeahead-wait-ms="200"
-                 typeahead-on-select="GalleryCtrl.changeUser(user)" typeahead-template-url="searchresult.html">
-                 <!--ng-keyup="$event.keyCode == 13 ? GalleryCtrl.changeUser(username) : null">-->
-              <button class="btn btn-search" ng-click="GalleryCtrl.changeUser(user)" ng-disabled="!user">
-                <i class="glyphicon glyphicon-search text-5x"></i>
-              </button>
-        </span>
-        <!-- /input-group -->
-      </div>
-      <i class="glyphicon glyphicon-refresh" ng-if="isLoading"></i>
-      <span class="text-2x text-red" ng-if="noResults">No user found</span>
-      <!--<span class="text-2x text-red" ng-if="!noResults">{{GalleryCtrl.errorMessage}}</span>-->
-      <span class="text-2x text-red" ng-if="!noResults && GalleryCtrl.isPrivate">Private account, cannot view.</span>
-    </div>
+    <i class="glyphicon glyphicon-refresh" ng-if="isLoading"></i>
+    <span class="text-2x text-red" ng-if="noResults">No user found</span>
+    <!--<span class="text-2x text-red" ng-if="!noResults">{{GalleryCtrl.errorMessage}}</span>-->
+    <span class="text-2x text-red" ng-if="!noResults && GalleryCtrl.isPrivate">Private account, cannot view.</span>
   </div>
 
   <!--<div class="col-lg-3 col-xs-3">{{GalleryCtrl.currentUser.counts.media}} Posts</div>-->
   <!--<div class="col-lg-3 col-xs-3">{{GalleryCtrl.currentUser.counts.followed_by}} Followers</div>-->
   <!--<div class="col-lg-3 col-xs-3">{{GalleryCtrl.currentUser.counts.follows}} Follows</div>-->
 
+  <div class="searched-instagram-user tooltip-dark row margin-0" data-toggle="tooltip" data-placement="right"
+       title="ID: {{GalleryCtrl.currentUser.id}}" data-animation="true">
+    <div class="float-left title">Current gallery from user:&nbsp;&nbsp;&nbsp;</div>
+    <div class="float-left title">
+      <img ng-src="{{GalleryCtrl.currentUser.profile_picture}}" alt="user"
+           class="gallery-instagram-user-thumb-sm img-circle"/>
+      <a href="http://www.instagram.com/{{GalleryCtrl.currentUser.username}}" class="tooltip-dark"
+         data-toggle="tooltip" data-placement="right"
+         title="ID: {{GalleryCtrl.currentUser.id}}">
+        &nbsp;{{GalleryCtrl.currentUser.username}}</a>
+      <span class="text-2x"> ( <strong>{{GalleryCtrl.currentUser.full_name + ',' || ''}}</strong> {{GalleryCtrl.currentUser.counts.media}} posts )</span>
+      &nbsp;&nbsp;<i class="glyphicon glyphicon-info-sign text-4x"
+                     ng-click="GalleryCtrl.isInfoCollapsed=!GalleryCtrl.isInfoCollapsed"></i>
+    </div>
+    <div class="text-1x col-xs-12 padding-0" collapse="GalleryCtrl.isInfoCollapsed">
+      *This is an example to show the searching functionality of Instagram's API.<br/>
+      *Images belong to Instagram user shown above.
+    </div>
+  </div>
 
   <div class="yy-toolbar clearfix">
     <!--<div class="tool-icon float-left" ng-click="GalleryCtrl.reverseOrder=null"-->
@@ -89,6 +88,7 @@
        data-is-reverse="GalleryCtrl.reverseOrder" data-limit-num="GalleryCtrl.limitNum"
        data-order-var="GalleryCtrl.orderVar">
   </div>
+
   <div class="padding-15-lr">
     <div ng-if="!GalleryCtrl.isGridView" instagram-gallery-template-list="" data-galleries="GalleryCtrl.currentMedia"
          data-is-reverse="GalleryCtrl.reverseOrder" data-limit-num="GalleryCtrl.limitNum"
@@ -97,7 +97,8 @@
 
   </div>
 
-  <div class="row text-center gallery-loadmore margin-0" ng-if="GalleryCtrl.nextUrl && GalleryCtrl.currentMedia.length<GalleryCtrl.currentUser.counts.media">
+  <div class="row text-center gallery-loadmore margin-0"
+       ng-if="GalleryCtrl.nextUrl && GalleryCtrl.currentMedia.length<GalleryCtrl.currentUser.counts.media">
     <button class="btn btn-primary-transparent" ng-click="GalleryCtrl.loadMore()">Load More
       &nbsp; &nbsp;<i class="glyphicon glyphicon-chevron-down text-1x"></i></button>
   </div>

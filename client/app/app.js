@@ -19,7 +19,9 @@ angular
     //$httpProvider.defaults.useXDomain = true;
   })
 
-  .run(function ($rootScope) {
+  .run(function ($state, $rootScope) {
+    $rootScope.$state = $state;
+
     $rootScope.$on('$stateChangeStart', function () {
       $rootScope.isPageLoading = true;
     });

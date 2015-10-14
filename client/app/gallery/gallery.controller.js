@@ -12,6 +12,7 @@ function GalleryCtrl(InstagramApiServices, myInstagramGalleries, myInstagramAcco
   console.log(myInstagramGalleries.data);
   _this.isGridView = true;
   _this.reverseOrder = null;
+  _this.isInfoCollapsed = true;
   _this.topNum =null;
   _this.allMyMedia = myInstagramGalleries.data;
   _this.nextUrl = myInstagramGalleries.pagination.next_url || null;
