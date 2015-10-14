@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
   <link rel="stylesheet" href="bower_components/bootstrap-css-only/css/bootstrap.css" />
   <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- bower:css -->
   <!-- endbower -->
   <!-- endbuild -->
@@ -40,11 +41,13 @@
 
 <navbar></navbar>
 <navside></navside>
+
 <div ui-view class="ui-view-container"></div>
 <div class="ui-view-fade hidden" ng-click="NavCtrl.toggleAsideNav()"></div>
-<div class="loading-indicator" ng-if="isPageLoading">
-  <img src="assets/images/loader-square.gif" alt=""/>
-</div>
+
+<!--<div class="loading-indicator text-center" ng-if="!isPageLoading">-->
+  <!--<img src="assets/images/loader-square.gif" alt=""/>-->
+<!--</div>-->
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
