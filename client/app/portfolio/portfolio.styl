@@ -44,7 +44,6 @@
   border-style solid
   border-color $yy-orange-pale $yy-orange-pale transparent transparent
 
-
 .portfolio-container .portfolio-examples-container
   @media screen and (max-width: 967px)
     margin-top 3rem
@@ -53,15 +52,35 @@
   @media screen and (min-width: 1300px)
     margin-top 7rem
 
-
 /*----------------------*/
 .portfolio-mockup-container
-  padding 4rem 0
+  padding 3rem 0
 
 .portfolio-mockup-container .mockup-title
   font-size $text-3x
   padding 1rem
 
-.portfolio-mockup-container .image-container
+.portfolio-mockup-container .demo-container
   max-width 80rem
   margin 0 auto
+
+.portfolio-mockup-container .demo-container.todo-container
+  background #eee
+
+.portfolio-mockup-container .demo-container.todo-container .nav-tabs
+  background #fff
+
+.portfolio-mockup-container .demo-container.todo-container .nav-tabs > li.active > a
+  background #eee
+
+.portfolio-mockup-container .demo-container.widget-container
+  background #eee
+  padding 2rem
+
+.portfolio-mockup-container .demo-container.widget-container .ao-widget .ao-date,
+.portfolio-mockup-container .demo-container.widget-container .pp-widget .pp-widget-right
+  background #fff
+
+.portfolio-mockup-container .demo-container.widget-container .ao-widget .ao-date:after
+  bottom -1.8rem
+  border-top-color white

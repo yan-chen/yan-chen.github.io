@@ -8,12 +8,12 @@
       <!--</a>-->
       <img ng-src="{{GalleryCtrl.myAccount.profile_picture}}" alt="@mynameisyan"
            class="gallery-instagram-user-thumb img-circle"/>
-      <a href="http://www.instagram.com/mynameisyan">{{GalleryCtrl.myAccount.username}}</a>
+      <a ng-click="GalleryCtrl.changeUser(GalleryCtrl.myAccount)">{{GalleryCtrl.myAccount.username}}</a>
     </h4>
 
     <div class="gallery-description text-3x">
       I love taking photos, especially when travelling.
-      <br/>Photos help me with better remembering the places I've been to and experiences I've had.
+      <br/>Photo turns a moment into eternity, it helps me with better remembering the places I've been to and experiences I've had.
     </div>
   </div>
 
