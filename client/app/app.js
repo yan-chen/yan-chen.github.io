@@ -12,17 +12,17 @@ angular
   ])
 
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
-    $urlRouterProvider.when('/','/about');
+    $urlRouterProvider.when('/', '/about');
     $urlRouterProvider.otherwise('/about');
 
     //$locationProvider.html5Mode(true);
     //$httpProvider.defaults.useXDomain = true;
   })
 
-  .run(function ($state, $rootScope) {
+  .run(function ($state, $rootScope,$location,$window) {
     $rootScope.$state = $state;
-    $rootScope.isTouchDevice=function(){
-      console.log('ontouchstart' in document.documentElement);
+    $rootScope.isTouchDevice = function () {
+      //console.log('Not Touch Device');
       return 'ontouchstart' in document.documentElement;
     };
 
@@ -31,6 +31,11 @@ angular
     });
     $rootScope.$on('$stateChangeSuccess', function () {
       $rootScope.isPageLoading = false;
-    })
+
+      if (!$window.ga)
+        return;
+      $window.ga('send', 'pageview', {page: $location.path()});
+    });
+
   });
 
