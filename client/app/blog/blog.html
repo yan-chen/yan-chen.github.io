@@ -1,0 +1,19 @@
+<div class="blog-container">
+  <div class="blog-header text-center">
+    <img class="full-width" ng-src="{{BlogCtrl.currentUser.profile_picture}}" alt=""/>
+  </div>
+  <div class="user-profile">
+    <img class="img-circle" ng-src="{{BlogCtrl.currentUser.profile_picture}}" alt=""/>
+  </div>
+  <div class="text-center user-info">
+    <p class="text-5x"><a href="http://www.instagram.com/{{GalleryCtrl.currentUser.username}}">{{BlogCtrl.currentUser.username}}</a></p>
+    <p class="text-3x">{{BlogCtrl.currentUser.bio}}</p>
+  </div>
+  <div class="blog-content">
+  <div ng-if="BlogCtrl.timelineView" class="timeline-view">
+    <div data-blog-timeline data-galleries="BlogCtrl.allMyMedia"></div>
+  </div>
+  <div ng-if="!ResumeCtrl.timelineView">
+    <div blog-block></div>
+  </div>
+</div></div>

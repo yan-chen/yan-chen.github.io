@@ -25,6 +25,11 @@ function NavbarCtrl() {
       //'icon': 'fa fa-image',
       'icon': 'glyphicon glyphicon-picture',
       'state': 'gallery'
+    },
+    {
+      'title': ' Contact',
+      'icon': 'glyphicon glyphicon-comment',
+      'state': 'messageboard'
     }
   ];
 

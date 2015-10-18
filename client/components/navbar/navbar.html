@@ -8,16 +8,17 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="/" class="navbar-brand" ng-if="$state.current.name!=='gallery'">
+        <a href="/" class="navbar-brand" ng-if="$state.current.name==='about'">
           <img class="logo" src="assets/images/yan_thumb.jpg" alt=""/>
         </a>
       </div>
       <div class="navbar-collapse collapse" id="navbar-main">
         <ul class="nav navbar-nav yy-nav-menu">
           <li ng-repeat-start="item in NavCtrl.menu track by $index" ui-sref-active="active">
-            <a ui-sref="{{item.state}}"><i class="{{item.icon}}"></i> {{item.title}}</a>
+            <!--<a ui-sref="{{item.state}}"><i class="{{item.icon}}"></i> {{item.title}}</a>-->
+            <a ui-sref="{{item.state}}"> {{item.title}}</a>
           </li>
-          <li ng-if="$index!=2"><a> | </a></li>
+          <li ng-if="$index!=3"><a>|</a></li>
 
           <!--<li ng-controller="ResumeCtrl as ResumeCtrl" ng-if="ResumeCtrl.language==='ch'"-->
               <!--ng-click="ResumeCtrl.changeLang('en')">-->

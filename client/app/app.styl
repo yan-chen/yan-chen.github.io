@@ -135,6 +135,11 @@ $text-4x=1.8rem
 $text-5x=2rem
 $text-10x=3rem
 
+$screen-cell =400px
+$screen-xs =767px
+$screen-sm =967px
+$screen-md =1199px
+$screen-lg-min =1200px
 
 .full-width
   width 100%
@@ -193,10 +198,13 @@ $yy-gray-light = #eeeeee
 
 // Component styles are injected through grunt
 // injector
+@import 'blog/blog.styl';
 @import 'gallery/gallery.styl';
 @import 'main/main.styl';
+@import 'messageboard/messageboard.styl';
 @import 'portfolio/portfolio.styl';
 @import 'resume/resume.styl';
+@import '../components/blog-timeline/blog-timeline.styl';
 @import '../components/example-todo/example-todo.styl';
 @import '../components/example-widget/example-widget.styl';
 @import '../components/footer/footer.styl';
@@ -215,9 +223,6 @@ $yy-gray-light = #eeeeee
 /*--------*/
 .loading-indicator
   position absolute
-  top 0
-  left 0
-  right 0
-  bottom 0
-  background rgba(0,0,0,.7)
-  z-index 5
+  width 100%
+  text-align center
+  top 35rem

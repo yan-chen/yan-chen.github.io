@@ -1,0 +1,37 @@
+<div class="yy-container messageboard-container">
+  <p class="text-4x messageboard-title">
+    Thank you for visitng my site! If you have any questions or comments, you are welcome to send me an email
+    or to leave a message here.
+  </p>
+
+  <ul class="chatbox">
+    <li ng-repeat="message in MessageCtrl.messages">
+      <i class="pin"></i>
+      <!--<div class="sticky-note-block" ng-style="{'transform':'rotate({{MessageCtrl.randomNumber}}deg)'}">-->
+      <div class="sticky-note-block" ng-class-odd="'sticky-note-block-odd'" ng-class-even="'sticky-note-block-even'">
+      <p class="text-3X">{{ message.from }}: </p>
+      <p class="sticky-note-content">{{ message.content }}</p>
+      </div>
+    </li>
+  </ul>
+
+  <form ng-submit="MessageCtrl.addMessage()">
+    <div class="message-user-info">
+      <textarea class="form-control" rows="3" ng-model="MessageCtrl.message"
+                placeholder="Enter your comment here"></textarea>
+
+
+      <div class="input-wrapper">
+        <input type="text" class="form-control" placeholder="Name (Optional)" ng-model="MessageCtrl.user"/>
+      </div>
+      <div class="input-wrapper">
+        <input type="text" class="form-control" placeholder="Contact information (Optional)"
+               ng-model="MessageCtrl.contact"/>
+      </div>
+    </div>
+    <button class="btn btn-primary-transparent " type="submit" value="Add Message"> Submit Comments</button>
+
+  </form>
+
+
+</div>

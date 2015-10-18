@@ -1,0 +1,55 @@
+<div class="yy-blog-timeline">
+  <div class="row margin-0 full-width hidden-xs" ng-repeat="gallery in galleries">
+    <div class="yy-blog-timeline-box" ng-class-odd="'left'" ng-class-even="'right'">
+      <div class="text-right yy-blog-timeline-date">{{gallery.created_time*1000| date:'MMM dd, yyyy'}}</div>
+
+      <div class="yy-blog-timeline-box-inner">
+        <div class="yy-blog-timeline-image-container">
+          <a href=""><img class="" ng-src="{{gallery.images.low_resolution.url}}" alt=""/></a>
+        </div>
+        <div class="yy-blog-timeline-node">
+          o
+        </div>
+        <div class="yy-blog-timeline-content">
+          <div class="yy-blog-timeline-location">{{gallery.location.name}}</div>
+          <div class="gallery-image-caption">{{gallery.caption.text}}</div>
+
+          <div ng-repeat="comment in gallery.comments.data track by $index">
+            <div class="gallery-image-comment">
+              <a href="https://instagram.com/{{comment.from.username}}">
+                <img src="{{comment.from.profile_picture}}" class="img-circle"/>
+                <strong>{{comment.from.username}}</strong>
+              </a>
+              &nbsp;&nbsp;&nbsp;{{comment.text}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row margin-0 full-width visible-xs" ng-repeat="gallery in galleries">
+    <div class="yy-blog-timeline-box right">
+      <div class="yy-blog-timeline-box-inner">
+        <div class="yy-blog-timeline-image-container">
+          <a href=""><img class="full-width" ng-src="{{gallery.images.standard_resolution.url}}" alt=""/></a>
+        </div>
+        <span> {{gallery.created_time*1000| date:'MMM dd, yyyy'}}</span>
+
+        <div class="yy-blog-timeline-content">
+          <div class="yy-blog-timeline-location">{{gallery.location.name}}</div>
+          <div>{{gallery.caption.text}}</div>
+
+          <div ng-repeat="comment in gallery.comments.data track by $index">
+            <div class="gallery-image-comment">
+              <a href="https://instagram.com/{{comment.from.username}}">
+                <img src="{{comment.from.profile_picture}}" class="img-circle"/>
+                <strong>{{comment.from.username}}</strong></a>
+              &nbsp;&nbsp;&nbsp;{{comment.text}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

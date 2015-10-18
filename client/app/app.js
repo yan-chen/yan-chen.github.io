@@ -8,7 +8,8 @@ angular
     'ui.router',
     'ui.bootstrap',
     'akoenig.deckgrid',
-    'LocalStorageModule'
+    'LocalStorageModule',
+    'firebase'
   ])
 
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
