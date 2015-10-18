@@ -13,7 +13,11 @@
           o
         </div>
         <div class="yy-blog-timeline-content">
-          <div class="yy-blog-timeline-location">{{gallery.location.name}}</div>
+          <div class="yy-blog-timeline-location">
+            <a href="https://instagram.com/explore/locations/{{gallery.location.id}}/">
+              {{gallery.location.name}}
+            </a>
+          </div>
           <div class="clearfix text-1x">
             <i class="glyphicon glyphicon-heart-empty text-red"></i> {{gallery.likes.count}}&nbsp;&nbsp;
             <i class="glyphicon glyphicon-comment text-blue"></i> {{gallery.comments.count}}
@@ -45,7 +49,11 @@
           o
         </div>
         <div class="yy-blog-timeline-content">
-          <div class="yy-blog-timeline-location">{{gallery.location.name}}</div>
+          <div class="yy-blog-timeline-location">
+            <a href="https://instagram.com/explore/locations/{{gallery.location.id}}/">
+              {{gallery.location.name}}
+            </a>
+          </div>
           <div class="yy-blog-timeline-image-container">
             <a href=""><img class="full-width" ng-src="{{gallery.images.standard_resolution.url}}" alt=""/></a>
           </div>
