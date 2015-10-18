@@ -1,9 +1,13 @@
 .blog-container .blog-header
   width 100%
   height 25rem
-  filter blur(5px)
+  filter blur(10px)
   overflow hidden
   position relative
+  background-color rgba(0,0,0,.5)
+  @media screen and (max-width $screen-xs)
+    height 16rem
+
 
 .blog-container .blog-header:after
   position absolute
@@ -15,7 +19,7 @@
 
 .blog-container .blog-header img
   position absolute
-  bottom 0
+  bottom -60%
   left 0
   right 0
   background-color rgba(0,0,0,.5)
@@ -26,12 +30,25 @@
   width 100%
   text-align center
   margin-top -7.5rem
-
-.blog-container .user-info
-  margin-top 10rem
+  @media screen and (max-width $screen-xs)
+    margin-top -6.5rem
 
 .blog-container .user-profile img
   border 5px solid white
+  @media screen and (max-width $screen-xs)
+    width 13rem
+
+.blog-container .user-info
+  margin-top 10rem
+  @media screen and (max-width $screen-xs)
+    margin-top 8rem
 
 .blog-container .blog-content
-  margin-top 2rem
+  margin 3rem 0 5rem
+
+
+.blog-container .blog-loadmore
+  margin 8rem 0 5rem
+.blog-container .blog-loadmore .btn
+  padding 1rem 5rem
+

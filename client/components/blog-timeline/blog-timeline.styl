@@ -4,21 +4,18 @@
 
 .yy-blog-timeline-box
   position relative
-  height 35rem
+  min-height 37rem
+  color gray
 
 .yy-blog-timeline-box.left
   margin-right 50%
-  padding 3rem 0 3rem 3rem
-
-.yy-blog-timeline-box .yy-blog-timeline-date
-  padding 0 3rem 0.5rem
-
+  padding 3rem 0 3rem 2rem
 
 .yy-blog-timeline-box.right
   margin-left 50%
-  padding 3rem 3rem 3rem 0
+  padding 3rem 2rem 3rem 0
   @media screen and (max-width 767px)
-    margin-left 4rem
+    margin-left 3rem
 
 
 .yy-blog-timeline-box:before
@@ -29,7 +26,6 @@
   background $yy-blue
   top 0
 
-
 .yy-blog-timeline-box.left:before
   right -0.15rem
 
@@ -37,17 +33,35 @@
   left -0.15rem
 
 
+.yy-blog-timeline-box .yy-blog-timeline-date
+  padding 0 3rem 0.5rem
+  font-size $text-2x
+
+.yy-blog-timeline-box.left .yy-blog-timeline-date
+  float right
+
+.yy-blog-timeline-box.right .yy-blog-timeline-date
+  float left
+
+.yy-blog-timeline-box.left .yy-blog-timeline-index
+  float left
+  font-size $text-1x
+.yy-blog-timeline-box.right .yy-blog-timeline-index
+  float right
+  font-size $text-1x
+
+
 .yy-blog-timeline-box .yy-blog-timeline-box-inner
   border-top solid $yy-blue 2px
 
 
 .yy-blog-timeline-box.left .yy-blog-timeline-box-inner
-  padding-right 6rem
+  padding-right 4rem
 
 .yy-blog-timeline-box.right .yy-blog-timeline-box-inner
-  padding-left 6rem
+  padding-left 4rem
   @media screen and (max-width 767px)
-    padding-left 3rem
+    padding-left 1rem
 
 .yy-blog-timeline-box .yy-blog-timeline-box-inner .yy-blog-timeline-node
   position absolute
@@ -56,34 +70,38 @@
   background #fff
 
 .yy-blog-timeline-box.left .yy-blog-timeline-box-inner .yy-blog-timeline-node
-  top 1.5rem
+  top 2.5rem
   right -1rem
 
 .yy-blog-timeline-box.right .yy-blog-timeline-box-inner .yy-blog-timeline-node
   top 1.5rem
   left -1rem
 
+
 .yy-blog-timeline-box .yy-blog-timeline-box-inner .yy-blog-timeline-image-container
   position absolute
   max-width 60%
   background #fff
-
+  margin 0 auto
 
 .yy-blog-timeline-box.right .yy-blog-timeline-box-inner .yy-blog-timeline-image-container
-  left -80%
+  left -90%
   @media screen and (max-width 767px)
-    left -3rem
+    position relative
+    left 0
+    margin-bottom 2rem
 
 .yy-blog-timeline-box.left .yy-blog-timeline-box-inner .yy-blog-timeline-image-container
-  right -80%
+  right -75%
 
 
 .yy-blog-timeline-box .yy-blog-timeline-box-inner .yy-blog-timeline-content
+  overflow hidden
   position relative
   border-radius 0.5rem
   padding 2rem 2rem 1rem 2rem
   font-size $text-3x
-  @media screen and (max-width 767px)
+  @media screen and (max-width $screen-xs)
     margin-top 2rem
 
 
@@ -102,10 +120,12 @@
 
 .yy-blog-timeline-box .yy-blog-timeline-box-inner .yy-blog-timeline-content .gallery-image-caption
   font-size $text-1x
-  margin-top 2rem
+  margin 1.5rem 0
+  @media screen and (max-width $screen-xs)
+    font-size $text-2x
 
 .yy-blog-timeline-box .yy-blog-timeline-box-inner .yy-blog-timeline-content .gallery-image-comment
   font-size $text-1x
 
 .yy-blog-timeline-box .yy-blog-timeline-box-inner .yy-blog-timeline-content .gallery-image-comment img
-  width 2.5rem
+  width 2rem

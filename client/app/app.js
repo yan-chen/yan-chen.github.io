@@ -35,7 +35,7 @@ angular
 
       if (!$window.ga)
         return;
-      $window.ga('send', 'pageview', {page: $location.path()});
+      //$window.ga('send', 'pageview', {page: $location.path()});
     });
 
   });
