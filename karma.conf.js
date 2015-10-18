@@ -21,6 +21,8 @@ module.exports = function(config) {
       'client/bower_components/lodash/dist/lodash.compat.js',
       'client/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'client/bower_components/angular-local-storage/dist/angular-local-storage.js',
+      'client/bower_components/firebase/firebase.js',
+      'client/bower_components/angularfire/dist/angularfire.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'client/app/app.js',
