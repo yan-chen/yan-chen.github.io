@@ -10,8 +10,12 @@
     "endMonth": "",
     "endYear": "Current",
     "description": [
-      "Data mining & data warehouse",
-      "Data analysis & data visualization"
+      "GPA: 3.77, Golden Key International Honour Society",
+      "Project management leadership & scheduling",
+      "Improving current business processes (A3 Planning approach)",
+      "Data analysis (R) & data visualization (Tableau)",
+      "Business data analysis & business decision making",
+      "Business Intelligence Maturity Assessment & Recommendations"
     ]
   },
   {
@@ -24,8 +28,9 @@
     "endMonth": "",
     "endYear": "Current",
     "description": [
-      "Communicate with end users/stakeholders to gather and refine product requirements;",
-      "Use HTML, CSS, AngularJS to prototype & develop web application/user interface;"
+      "Design & develop UI prototypes with team members for an internal application that is currently being used by >1 million associates in 26 international markets",
+      "Communicate with stakeholders of the UI product for requirements gathering and clarification",
+      "Maintain released UI product, make changes and updates as needed"
     ]
   },
   {
@@ -38,10 +43,8 @@
     "endMonth": "Apr",
     "endYear": "2014",
     "description": [
-      "Assisted with UI development for an internal agent application using HTML, CSS, AngularJS, Bootstrap, Git and other related technology stacks;",
-      "Used Chrome DevTools to test performance of UI component created, and to debug errors;",
-      "Created UX design mockups using MockFlow based on business product requirements;",
-      "Assist with UI requirement analysis by communicating with client."
+      "Assisted in developing UI for an internal app using HTML, CSS, AngularJS & other related skills",
+      "Created UX design mockups using MockFlow based on users & business product requirements"
     ]
   },
   {
@@ -54,8 +57,8 @@
     "endMonth": "Aug",
     "endYear": "2013",
     "description": [
-      "Assisted with UI development for an internal agent application using HTML, CSS, AngularJS, Bootstrap, Git and other related technology stacks;",
-      "Used Chrome DevTools to test performance of UI component created, and to debug errors;"
+      "Assisted in developing UI for an internal app using HTML, CSS, AngularJS & other related skills",
+      "Created UX design mockups using MockFlow based on users & business product requirements"
     ]
   },
   {
@@ -75,21 +78,6 @@
     ]
   },
   {
-    "title": "Assistant Database Administrator",
-    "company": "SWCA Environmental Consultant",
-    "companyUrl": "http://www.swca.com/",
-    "companyLogo": "assets/images/logos/logo_swca.jpg",
-    "location": "Salt Lake City, UT",
-    "startYear": "2011",
-    "endMonth": "May",
-    "endYear": "2013",
-    "description": [
-      "Provide maintenance and user support on existing databases of cultural resource information;",
-      "Assisted the Database Administrator with designing and implementing new databases using PG Admin and Microsoft Access;",
-      "Develop stand-alone MS Access databases for generating analysis reports."
-    ]
-  },
-  {
     "title": "Technical QA Specialist for Curriculum",
     "company": "The American Academy",
     "companyUrl": "http://www.theamericanacademy.com/",
@@ -102,5 +90,19 @@
       "Helped with converting 200 online courses into new HTML templates;",
       "Checked and tested the courses to make sure its functionality and quality are meeting the requirements."
     ]
-  }
+  }, {
+  "title": "Assistant Database Administrator",
+  "company": "SWCA Environmental Consultant",
+  "companyUrl": "http://www.swca.com/",
+  "companyLogo": "assets/images/logos/logo_swca.jpg",
+  "location": "Salt Lake City, UT",
+  "startYear": "2011",
+  "endMonth": "May",
+  "endYear": "2013",
+  "description": [
+    "Provide maintenance and user support on existing databases of cultural resource information;",
+    "Assisted the Database Administrator with designing and implementing new databases using PG Admin and Microsoft Access;",
+    "Develop stand-alone MS Access databases for generating analysis reports."
+  ]
+}
 ]
