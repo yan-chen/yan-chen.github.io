@@ -541,3 +541,17 @@ FileETag None
 # <IfModule mod_headers.c>
 #    Header set Connection Keep-Alive
 # </IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /dist/
+
+    # If the request is a file, folder or symlink that exists, serve it up
+    RewriteCond %{REQUEST_FILENAME} -s [OR]
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^.*$ - [NC,L]
+
+    # otherwise, serve your index.html app
+    RewriteRule ^(.*) /index.html [NC,L]
+</IfModule>
