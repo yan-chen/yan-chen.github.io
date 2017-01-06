@@ -544,7 +544,7 @@ FileETag None
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /dist/
+    RewriteBase /
 
     # If the request is a file, folder or symlink that exists, serve it up
     RewriteCond %{REQUEST_FILENAME} -s [OR]
