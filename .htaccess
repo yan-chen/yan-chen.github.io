@@ -548,12 +548,7 @@ FileETag None
     RewriteEngine On
     RewriteBase /
 
-    # If the request is a file, folder or symlink that exists, serve it up
-    RewriteCond %{REQUEST_FILENAME} -s [OR]
-    RewriteCond %{REQUEST_FILENAME} -l [OR]
-    RewriteCond %{REQUEST_FILENAME} -d
-    RewriteRule ^.*$ - [NC,L]
-
-    # otherwise, serve your index.html app
-    RewriteRule ^(.*) /index.html [NC,L]
+    RewriteCond %{REQUEST_URI}  ^/$
+    RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/?(.*)$
+    RewriteRule ^(.*)$ /snapshots/%1? [NC,L]
 </IfModule>
